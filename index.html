@@ -1,0 +1,428 @@
+<html>
+<head>
+<title>ScoresForecasting.com</title>
+
+<link rel="shortcut icon" href="logo.ico" />
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.immaginesfondo {
+  position: relative;
+  opacity: 0.65;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+}
+.immaginesfondo {
+  background-image: url("sfondo2.jpg");
+  height: 100%;
+  width: 100%;
+}
+
+
+
+span{
+  text-align: center;
+}
+.border {
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+.altriA {
+  text-align: center;
+}
+.altriA a{
+  color: #fff;
+  padding: 18px;
+  font-size: 10px;
+  letter-spacing: 5px;
+  bottom:0px;
+  position:absolute;
+  color: #f4511e;
+}
+.altriB a{
+  color: #fff;
+  padding: 18px;
+  font-size: 10px;
+  letter-spacing: 5px;
+  bottom:0px;
+  position: absolute;
+  color: #f4511e;
+}
+
+
+/*pulsante per andare avanti*/
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 99.5%;
+  height: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+/*tree colonne*/
+* {box-sizing: border-box;}
+/* Create three equal columns that floats next to each other */
+.altriA {
+  text-align: center;
+  bottom:0px;
+  left:43%;
+  position:fixed;
+}
+.altriB {
+  text-align: center;
+  bottom:0px;
+  left:43%;
+  position:fixed;
+}
+
+.columns {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    
+    position:absolute;
+}
+.columnd {
+    right:0px;
+    width: 25%;
+    padding: 10px;
+    
+    
+    position:absolute;
+}
+.colonna {
+    float: left;
+    width: 49%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+h1{
+text-shadow: 2px 2px 4px black;
+  filter:DropShadow(Color=#000000, OffX=2, OffY=2);
+}
+
+
+
+.cell {  display: none;}
+
+.imgleague{
+  height: 80px;
+  
+  width: auto;
+  display:block;
+  display:inline-block;vertical-align: middle;
+}
+
+
+#altri1{display:none;}
+
+#altri2{display:none;}
+
+#tornasoliti{display:none;}
+
+.tutte {
+  right: 0%;
+  top:0%;
+  position:absolute;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 20%;
+  height: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.tutte span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.tutte span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.tutte:hover span {
+  padding-right: 25px;
+}
+
+.tutte:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@media only screen and (max-width: 1600px) {
+
+span{font:20px "Lato", sans-serif;}
+.button{height:100px;}
+}
+
+@media only screen and (max-width: 1400px) {
+
+span{font:15px "Lato", sans-serif;}
+.button{height:85px;}
+}
+
+@media only screen and (max-width: 985px) {
+.cell {display: inline-block;}
+.pc {  display: none;}
+.imgleague{display:inline-block;vertical-align: middle;}
+.button{margin: 0.5px;}
+span{font: 30px "Lato", sans-serif;}
+.button{height:150px;}
+}
+
+
+</style>
+
+
+
+
+</head>
+<body data-gr-c-x-loaded="true">
+ <div class="immaginesfondo">
+   
+   
+   
+   
+<div class="pc">
+	<div class="row">
+<span class="border"><h1>PROGETTI GIACOMO SACCAGGI</h1></span>
+  <div class="columns" style="background-color:hsla(147, 50%, 47%, 0.01)">
+    
+<div  id="soliti1">
+
+<button class="button" onclick="https://giacomosaccaggi.github.io/DMcompetitions/AmesHousePrice_RandomForest_512_Giacomo_Saccaggi.html';"><span><img class="imgleague" src="A.png">  AMES HOUSE PRICES </span></button> 
+
+<div  id="altri1">
+  
+  
+<button class="button" onclick="location.href='https://giacomosaccaggi.github.io/DMcompetitions/OKCupid_RandomForest_512_Giacomo_Saccaggi.html';"><span><img class="imgleague" src="B.png">  OK CUPID </span></button>
+
+<button class="button" onclick="location.href='https://giacomosaccaggi.github.io/DMcompetitions/Bikesharing_Random_Forest_512_Giacomo_Saccaggi.html';"><span><img class="imgleague" src="C.png">  BIKE SHARING  </span></button>
+
+<button class="button" onclick="location.href='';"><span><img class="imgleague" src="SP2.png">  </span></button>  
+
+<button class="button" onclick="location.href='';"><span><img class="imgleague" src="F2.png">   </span></button>
+</div>
+
+  </div>
+  
+  <div class="colonna" style="background-color:hsla(147, 50%, 47%, 0.05)">
+    
+   <div  class="altriA" id="vaialtri">
+   <a href="javascript:vaialtri();"><h1>ALTRI PROGETTI</h1></a></div>
+   
+   <div  class="altriB" id="tornasoliti">
+   <a href="javascript:tornasoliti();"><h1>TORNA INDIETRO</h1></a></div>
+   
+  </div>
+  
+  <div class="columnd" style="background-color:hsla(147, 50%, 47%, 0.01)">
+    
+   <div  id="soliti2">
+     
+<button class="button" onclick="location.href='';"><span><img class="imgleague" src="E0.png">   </span></button>
+
+<button class="button" onclick="location.href='';"><span><img class="imgleague" src="SP1.png"> </span></button> 
+
+<button class="button" onclick="location.href='';"><span><img class="imgleague" src="F1.png">   </span></button>
+
+<button class="button" onclick="location.href='';"><span><img class="imgleague" src="G1.png">  </span></button>
+
+
+
+</div>
+
+
+
+   <div  id="altri2">
+  
+
+<button class="button" onclick="location.href='pgitascoresforecastingB1.html';"><span><img class="imgleague" src="B1.png">  PRO LEAGUE </span></button>
+
+<button class="button" onclick="location.href='pgitascoresforecastingP1.html';"><span><img class="imgleague" src="P1.png">  LIGA NOS </span></button>
+
+<button class="button" onclick="location.href='pgitascoresforecastingSC0.html';"><span><img class="imgleague" src="SC0.png">  SCOTTISH PREMIERSHIP </span></button>
+
+<button class="button" onclick="location.href='pgitascoresforecastingT1.html';"><span><img class="imgleague" src="T1.png">  SUPER LIG </span></button>
+  
+  </div>
+  
+  </div>
+  </div>
+</div>
+		
+		
+<script>
+var p2a = document.getElementById("altri1");
+var p2b = document.getElementById("altri2");
+var p1a = document.getElementById("soliti1");
+var p1b = document.getElementById("soliti2");
+var p1c = document.getElementById("vaialtri");
+var p2c = document.getElementById("tornasoliti");
+
+
+
+
+
+function vaialtri() {if (p2a.style.display === 'none') {
+p2a.style.display = 'block';
+p2b.style.display = 'block';
+p2c.style.display = 'block';
+p1a.style.display = 'none';
+p1b.style.display = 'none';
+p1c.style.display = 'none';
+} else { 
+p2a.style.display = 'none';
+p2b.style.display = 'none';
+p2c.style.display = 'none';
+p1a.style.display = 'block';
+p1b.style.display = 'block';
+p1c.style.display = 'block';
+  
+}}
+
+function tornasoliti() {if (p2a.style.display === 'block') {
+p2a.style.display = 'none';
+p2b.style.display = 'none';
+p2c.style.display = 'none';
+p1a.style.display = 'block';
+p1b.style.display = 'block';
+p1c.style.display = 'block';
+} else { 
+p2a.style.display = 'block';
+p2b.style.display = 'block';
+p2c.style.display = 'block';
+p1a.style.display = 'none';
+p1b.style.display = 'none';
+p1c.style.display = 'none';}}
+
+</script>
+		
+		
+		
+		
+		
+		<div class="cell">
+		<div class="row">
+		  
+
+
+   <span class="border"><h1>CAMPIONATI</h1></span>
+   
+   
+    <button class="button" onclick="location.href='pgitascoresforecastingI1.html';"><span><img class="imgleague" src="I1.png">  SERIE A </span></button>
+    <button class="button" onclick="location.href='pgitascoresforecastingI2.html';"><span><img class="imgleague" src="I2.png">  SERIE B </span></button>
+   
+<button class="button" onclick="location.href='pgitascoresforecastingE0.html';"><span><img class="imgleague" src="E0.png">  PREMIER LEAGUE </span></button>
+<button class="button" onclick="location.href='pgitascoresforecastingE1.html';"><span><img class="imgleague" src="E1.png">  FOOTBALL LEAGUE </span></button>
+<button class="button" onclick="location.href='pgitascoresforecastingSC0.html';"><span><img class="imgleague" src="SC0.png">  SCOTTISH PREMIERSHIP </span></button>
+
+    
+    
+<button class="button" onclick="location.href='pgitascoresforecastingD1.html';"><span><img class="imgleague" src="D1.png">  BUNDESLIGA </span></button>
+<button class="button" onclick="location.href='pgitascoresforecastingD2.html';"><span><img class="imgleague" src="D2.png">  BUNDESLIGA 2 </span></button>
+
+<button class="button" onclick="location.href='pgitascoresforecastingSP1.html';"><span><img class="imgleague" src="SP1.png">  LA LIGA </span></button>    
+<button class="button" onclick="location.href='pgitascoresforecastingSP2.html';"><span><img class="imgleague" src="SP2.png">  LA LIGA adelante</span></button>    
+
+
+<button class="button" onclick="location.href='pgitascoresforecastingF1.html';"><span><img class="imgleague" src="F1.png">  LIGUE 1 </span></button>
+<button class="button" onclick="location.href='pgitascoresforecastingF1.html';"><span><img class="imgleague" src="F2.png">  LIGUE 2 </span></button>
+
+<button class="button" onclick="location.href='pgitascoresforecastingN1.html';"><span><img class="imgleague" src="N1.png">  EREDIVISIE </span></button>
+
+<button class="button" onclick="location.href='pgitascoresforecastingB1.html';"><span><img class="imgleague" src="B1.png">  PRO LEAGUE </span></button>
+
+<button class="button" onclick="location.href='pgitascoresforecastingP1.html';"><span><img class="imgleague" src="P1.png">  LIGA NOS </span></button>
+
+<button class="button" onclick="location.href='pgitascoresforecastingT1.html';"><span><img class="imgleague" src="T1.png">  SUPER LIG </span></button>
+
+<button class="button" onclick="location.href='pgitascoresforecastingG1.html';"><span><img class="imgleague" src="G1.png">  Souper Ligka Ellada </span></button>
+
+<button class="button" onclick="location.href='allita.html';"><span>TUTTE LE PARTITE</span></button>
+
+</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+	
+</div>
+
+
+
+
+
+
+</body>
+</html>
