@@ -1,1 +1,1 @@
-AddType application/x-httpd-php5 .htm .html
+AddType application/x-httpd-php .htm .html
