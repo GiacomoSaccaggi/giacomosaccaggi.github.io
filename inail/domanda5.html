@@ -9,10 +9,11 @@ function finito_locale() {
     var r = document.getElementById('risultato');
     var rb = document.getElementById('risultato2');
     var p = document.getElementById('nome');
+    var k = document.getElementById('ke');
     text = p.elements[1].value
-    if(text==="(gatto)"){r.innerHTML = "";}else{r.innerHTML = "ATTENZIONE! La risposta alla domanda era sbagliata";}
+    if(text==="(gatto)"){r.innerHTML = "";}else{r.innerHTML = "ATTENZIONE! La risposta alla domanda era sbagliata";k.innerHTML = "errore";}
     text1 = p.elements[0].value
-    if(text1===""){rb.innerHTML = "ATTENZIONE! Ti sei dimenticato di copiare il codice cliente";}else{rb.innerHTML = "";}
+    if(text1===""){rb.innerHTML = "ATTENZIONE! Ti sei dimenticato di copiare il codice cliente";k.innerHTML = "errore";}else{rb.innerHTML = "";}
 }
 
 </script>
