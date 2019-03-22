@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<script src="funzione.js">
+</script>
+<script type="text/javascript">
+
+function finito_locale() {
+    var f = document.getElementById('finito');
+    f.innerHTML = 0;
+    var r = document.getElementById('risultato');
+    var rb = document.getElementById('risultato2');
+    var p = document.getElementById('nome');
+    text = p.elements[1].value
+    if(text==="camino"){r.innerHTML = "";}else{r.innerHTML = "ATTENZIONE! La risposta alla domanda era sbagliata";}
+    text1 = p.elements[0].value
+    if(text1==="Codice cliente"){rb.innerHTML = "ATTENZIONE! Ti sei dimenticato di copiare il codice cliente";}else{rb.innerHTML = "";}
+}
+
+</script>
+<body onload="loader()" >
+ <div id="loader"> <BR><BR><BR><hr><CENTER>TRA POCO ESCE LA DOMANDA</CENTER> <HR></div>
+<div style="display:none;" id="myDiv" >
+
+<span id="click" name="click"></span>
+<center>
+
+<H1>Domanda INAIL</H1>
+
+
+<hr>
+
+ <form action="" id="nome">
+  Inserire codice cliente:<br>
+  <input type="text" name="codice" value="Codice cliente">
+  <br><br><br>
+  Scrivere la parola tra le paretesi "(camino)":<br>
+  <input type="text" name="parola" value="" >
+  <br><br>
+</form> 
+   
+   <br><br><br>
+   
+   
+   <button onclick="finito()">Invia richiesta</button>
+   <br><br>
+   
+</center>
+<hr><br><br>
+<p>Ci hai messo <span id="counter">0</span> secondi.</p>
+<font color="red">
+<p><span id="risultato"></span></p><br>
+<p><span id="risultato2"></span></p>
+</font>
+<span id="finito" style="display:none;">1</span>
+<span id="ke" style="display:none;">giusto</span>
+
+
+</div>
+
+
+
+
+</body>
+</html>
