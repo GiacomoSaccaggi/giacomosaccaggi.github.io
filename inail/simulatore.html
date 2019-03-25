@@ -91,7 +91,24 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             return (e.which || e.keyCode) != 116;  
 
         });  
-    });  
+    }); 
+	key('⌘+r, ⌘+e,ctrl+f5, f5', function(){
+    var test = document.getElementById("capire").innerHTML
+            var test2 = document.getElementById("capire2").innerHTML
+            var str = new Date().toLocaleString();
+            var str = str.split(":");
+            var minuti = str[1];
+	          minuti = Number(minuti);
+	          test = Number(test);
+	          test2 = Number(test2);
+            
+            	if( test<minuti & test2==0){
+            		start();
+                document.getElementById("capire2").innerHTML = 1
+            	};
+    return false
+});
+
 </script>  
 <script src="https://giacomosaccaggi.github.io/inail/funzione.js"></script>
 <script src="https://giacomosaccaggi.github.io/inail/keymaster.js">
