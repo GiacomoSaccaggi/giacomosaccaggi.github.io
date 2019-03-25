@@ -1,54 +1,52 @@
 <!DOCTYPE html>
 <html>
+    <title>Click Day Simulator</title>
+    <link rel="shortcut icon" href="#">
+<style>
+        body{padding-top:50px; background-color: rgb(228,231,235);}
+        button {
+            background-color:dodgerblue;
+            border: none;
+            color:white;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+         button:hover {opacity: 1}
+        input[type=text] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid dodgerblue;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
 <script src="funzione.js">
 </script>
-<script type="text/javascript">
-function finito_locale() {
-    var f = document.getElementById('finito');
-    f.innerHTML = 0;
-    var r = document.getElementById('risultato');
-    var rb = document.getElementById('risultato2');
-    var p = document.getElementById('nome');
-    var k = document.getElementById('ke');
-    text = p.elements[1].value
-    if(text==="4"){r.innerHTML = "";}else{r.innerHTML = "ATTENZIONE! La risposta alla domanda era sbagliata";k.innerHTML = "errore";}
-    text1 = p.elements[0].value
-    if(text1===""){rb.innerHTML = "ATTENZIONE! Ti sei dimenticato di copiare il codice cliente";k.innerHTML = "errore";}else{rb.innerHTML = "";}
-}
 
-</script>
+<script type='text/javascript'>function finito_locale() {var r = document.getElementById('risultato');var rb = document.getElementById('risultato2');var p = document.getElementById('nome');var k = document.getElementById('ke');text = p.elements[1].value;if(text==="(gatto)"){r.innerHTML = '';}else{r.innerHTML = 'ATTENZIONE! La risposta alla domanda era sbagliata';k.innerHTML = 'errore';};text1 = p.elements[0].value;if(text1==='+5g3422739c53casced46afce754ad713d34da03f19ead5321afa19afdbf7c996'){rb.innerHTML = '';}else{rb.innerHTML = 'ATTENZIONE! Ti sei dimenticato di copiare il codice cliente';k.innerHTML = 'errore';};};</script>
 
-<body onload="loader()" >
- <div id="loader"> <BR><BR><BR><hr><CENTER>TRA POCO ESCE LA DOMANDA</CENTER> <HR></div>
-<div style="display:none;" id="myDiv" >
+</head>
+<body onload="loader();">
 
-<span id="click" name="click"></span>
+
+<div id="troppo" style="display:none;"> 
+
+<BR><BR><BR><hr><CENTER>MI SPIACE, CI HAI MESSO TROPPO RIPROVA</CENTER> <HR>
+
+</div>
+
+ <div id="loader" style="display:none;"> 
 <center>
-
-<H1>Domanda INAIL</H1>
-
-
-<hr>
-
- <form action="" id="nome">
-  Inserire codice cliente:<br>
-  <input type="text" name="codice" value="">
-  <br><br><br>
-  Quanto fa 2+2:<br>
-  <input type="text" name="parola" value="" >
-  <br><br>
-</form> 
-   
-   <br><br><br>
-   
-   
-   
-   
-<button onclick="finito()">Invia richiesta</button>
-   <br><br>
-   
-</center>
-<hr><br><br>
 <p>Ci hai messo <span id="counter">0</span> secondi.</p>
 <font color="red">
 <p><span id="risultato"></span></p><br>
@@ -57,7 +55,46 @@ function finito_locale() {
 <span id="finito" style="display:none;">1</span>
 <span id="ke" style="display:none;">giusto</span>
 
+</center>
 </div>
+<div  id="myDiv" >
+<span id="click" name="click" style="display:none;" ></span>
+<div id="time" style="display:none;" ></div>
+
+<center>
+
+<img src="inail.png" style="width: 10%;"><br>
+<b>AVVISO PUBBLICO ISI 2018<br>
+in attuazione dell'articolo 11, comma 5, del decreto legislativo 9 aprile 2008, n.81 e successive modificazioni<br><br>
+
+AVVISO PUBBLICO ISI AGRICOLTURA 2016<br>
+in attuazione dell'articolo 1, commi 862 e ss., della Legge 28 dicembre 2015, n.208<br><br>
+
+SPORTELLO INFORMATICO PER L'INVIO DELLA DOMANDA ONLINE
+</b>
+<hr>
+
+ <form action="" id="nome">
+  Inserisci il tuo Codice Aziendale:<br>
+  
+  
+<input type='text' name='codice' value='  '><br><br> Scrivi la parola all'interno delle virgolette "(gatto)": <br>
+  
+  <input type="text" name="parola" value="" >
+  <br><br>
+</form> 
+   
+   
+   <button onclick="finito()">Invia richiesta</button>
+   <br><br>
+   
+</center>
+<hr><br><br>
+
+
+
+</div>
+
 
 
 
