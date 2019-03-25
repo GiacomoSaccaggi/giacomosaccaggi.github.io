@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<title>INAIL</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<style>
+/* Popup container - can be anything you want */
+.popup {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 0%;
+  left: 0%;
+  
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>  
+<script type="text/javascript">  
+    $(function () {  
+        $(document).keydown(function (e) { 
+	          var test = document.getElementById("capire").innerHTML
+            var test2 = document.getElementById("capire2").innerHTML
+            var str = new Date().toLocaleString();
+            var str = str.split(":");
+            var minuti = str[1];
+	          minuti = Number(minuti);
+	          test = Number(test);
+	          test2 = Number(test2);
+            
+            	if( test<minuti & test2==0){
+            		start();
+                document.getElementById("capire2").innerHTML = 1
+            	}
+            
+            return (e.which || e.keyCode) != 116;  
+
+        });  
+    });  
+</script>  
+<script src="https://giacomosaccaggi.github.io/inail/funzione.js">
+</script>
+<body onload="nome()">
+<button onclick="login();" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Login</button>
+<div class="popup">
+<span class="popuptext" id="myPopup">
+  <br><br><br>Inserisci email<br><br>
+  <input type="text" id="email" value="" style="width: 80%;border-radius: 6px;text-align:center;"><br><br>
+  Inserisci password<br><br>
+  <input type="text" id="psw" value="" style="width: 80%;border-radius: 6px;text-align:center;"><br><br>
+ 
+  <button onclick="accedi()" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Login</button><br>
+  <font color="red">
+    <div id="accesso" style="display:none;" ><br><BR>Hai inserito la pasword sbagliata o ti sei dimenticato di inserire la mail.</div><br>
+  </font>
+
+
+
+</span>
+ 
+
+
+</div>
+<p id="capire" value="" style="display:none;" ></p>
+<p id="capire2" value="" style="display:none;" ></p>
+<p id="demo" value="" style="display:none;" ></p>
+<div style="position:absolute;left:30%;top: 0%;color: grey;"></p><b>Codice azienda (di prova): <b>+5g3422739c53casced46afce754ad713d34da03f19ead5321afa19afdbf7c996</b></div>
+<center>
+  <button onclick="tempo();" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">SIMULAZIONE</button><br></center>
+
+
+
+</body>
+</html>
