@@ -86,18 +86,19 @@ var test = document.getElementById("capire").innerHTML
             		start();
                 document.getElementById("capire2").innerHTML = 1
             	};
-}
+};
+function loadciao () {
 key('⌘+r, ⌘+e,ctrl+f5, ctrl+r, a ,f5', function(){
     startSimu ();
     return false
 });
-	nome();
+};
 
 </script>  
 <script src="https://giacomosaccaggi.github.io/inail/funzione.js"></script>
 <script src="https://giacomosaccaggi.github.io/inail/keymaster.js">
 </script>
-<body >
+<body onload="nome();loadciao();">
 <button onclick="login();" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Login</button>
 <div class="popup">
 <span class="popuptext" id="myPopup">
