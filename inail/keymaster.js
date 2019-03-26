@@ -12,7 +12,7 @@
       '⇧': 16, shift: 16,
       '⌥': 18, alt: 18, option: 18,
       '⌃': 17, ctrl: 17, control: 17,
-      '⌘': 91, command: 91
+      'cmd': 91, command: 91
     },
     // special keys
     _MAP = {
