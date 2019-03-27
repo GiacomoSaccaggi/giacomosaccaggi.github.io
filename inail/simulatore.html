@@ -121,9 +121,20 @@ key('cmd+r, cmd+e,ctrl+f5, ctrl+r, a ,f5', function(){
 <p id="capire" value="" style="display:none;" ></p>
 <p id="capire2" value="" style="display:none;" ></p>
 <p id="demo" value="" style="display:none;" ></p>
-<div style="position:absolute;left:30%;top: 0%;color: grey;"></p><b>Codice azienda (di prova): <b>+5g3422739c53casced46afce754ad713d34da03f19ead5321afa19afdbf7c996</b></div>
+<div style="position:absolute;left:30%;top: 0%;color: grey;display:none;"></p><b>Codice azienda (di prova): <b>+5g3422739c53casced46afce754ad713d34da03f19ead5321afa19afdbf7c996</b></div>
 <center>
-  <button onclick="tempo();" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" style="position:fixed;left:0%;top: 0%;">SIMULAZIONE</button><br></center>
+	<input type="text" value="+5g3422739c53casced46afce754ad713d34da03f19ead5321afa19afdbf7c996" id="myInput" style="display:none;" >
+
+		Codice azienda (di prova): <b>+5g3422739c53casced46afce754ad713d34da03f19ead5321afa19afdbf7c996</b><br><br>
+		<script>
+		function copia() {
+		  var copyText = document.getElementById("myInput");
+		  copyText.select();
+		  document.execCommand("copy");
+		}
+		</script>
+  <div style="position:fixed;left:0%;top: 0%;"><button onclick="tempo();" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >SIMULAZIONE</button>
+		<button onclick="copia();"  style="background-color:dodgerblue;">Copia codice cliente</button></div><br></center>
 
 
 
