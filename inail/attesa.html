@@ -53,6 +53,18 @@ RICEVERE LA FORM PER L'INSERIMENTO DEL CODICE DOMANDA</H1>
 (premere F5 (⌘+R su Mac) finché appare la pagina di inserimento del codice)
 </h2>
 
+ Simulazione attiva a partire dal <p id="demo"></p>
+
+<script>
+var d = new Date();
+var n1 = String(d.getUTCDate());
+var n2 = String(d.getUTCMonth());
+var n3 = String(d.getUTCFullYear());
+var n4 = String(d.getUTCHours());
+var n5 = d.getUTCMinutes();
+n5=String(n5+1);
+document.getElementById("demo").innerHTML = n1+"/"+n2+"/"+n3+" alle ore "+n4+":"+n5;
+</script>
 
 </center>
 
