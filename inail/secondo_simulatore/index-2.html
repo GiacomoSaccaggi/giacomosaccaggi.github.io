@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="">
+
+<!-- Mirrored from clicktrainermagnani.altervista.org/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Mar 2019 01:10:07 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Click Day Simulator</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap-theme.min.css">
+    <script src="../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="../ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/index.js"></script>
+    <style>
+        body{padding-top:50px; background-color: rgb(228,231,235);}
+        h1{margin: auto 1em 1em 1em;}
+        input {display: block; width: 100%; margin-bottom: 1em}
+        .centred {text-align: center}
+    </style>
+
+</head>
+
+<body>
+ 
+<div ng-app="auth" ng-controller="authctrl" class="container container-fluid">
+    <div class="row" ng-hide="username == {{'username1'}} && password == {{'password1'}} ">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <img src="images/inail.png" style="width: 40%; margin: auto auto 2em auto; display: block;">
+            <h1 class="centred">CLICK DAY</h1>
+            <p class="centred">Username</p>
+            <input type="text" ng-model="username" autocomplete=“off”>
+            <p class="centred">Password</p>
+            <input type="password" ng-model="password" autocomplete=“off”>
+            <center><button style="margin-top: 3em" class="btn btn-primary" disabled>Accedi</button></center>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+        
+    <div class="row" ng-hide="username != {{'username1'}} || password != {{'password1'}} ">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <img src="images/inail.png" style="width: 40%; margin: auto auto 2em auto; display: block;">
+            <h1 class="centred">Clicker simulator</h1>
+            <p class="centred">Codice azienda<br></p>
+            <h4 style="margin-bottom: 3em" class="centred" id="codaz">{{codazienda}}</h4>
+            <center>
+            <button class="btn btn-warning" onclick="copyToClipboard('#codaz')">Copia codice</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modalinstructions">Prosegui</button>
+            </center>
+            
+            <div class="modal fade" id="modalinstructions">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+      
+        <!-- Modal Header -->
+                    <div class="modal-header" style="background-color: #428bca">
+                    <h4 class="modal-title" style="color: white">Guida al simulatore</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+        
+        <!-- Modal body -->
+                    <div class="modal-body">
+                    <p>
+                    Benvenuto nella simulazione del click day.<br> <br>
+                    Assicurati di aver copiato il codice azienda in questa pagina prima di iniziare.<br> <br>
+                    Cliccando su "Inizia la simulazione" verrai indirizzato a una nuova pagina dove visualizzerai l'orario di inizio della prossima simulazione (corrispondente allo scoccare del prossimo minuto).<br>
+                    A partire dall'orario indicato dovrai cliccare premere F5 per iniziare la simulazione (cmd + R per gli utenti Mac).<br>
+                    Per gli utenti Safari la combinazioni di tasti è diversa: cmd + E.<br>
+                    Tale combinazione è SOLO a fine del simulatore; il giorno del Click Day sarà cmd + R come tutti gli altri browser. <br> <br>
+                    Il giorno del Click Day sarà anche possibile cliccare sul pulsante di refresh del browser utilizzato; questa funzione non è però disponibile nella simulazione.<br> <br>
+                    Appariranno due campi: nel primo bisognerà incollare il codice azienda copiato in precedenza, il secondo presenterà invece una richiesta da soddisfare.<br>
+                    Una volta compilati correttamente i campi premi Invio o clicca su "Invia" per terminare la simulazione e visualizzare il tuo tempo.<br> <br>
+                    NOTA IMPORTANTE: il giorno del Click Day la pagina potrà presentarsi diversamente e/o con richieste diverse. Di conseguenza bisognerà leggere con attenzione la richiesta ed allo stesso tempo essere veloci nel compilare i campi.<br> <br>
+                    Buon Click Simulator!
+                    </p>
+                    </div>
+        
+        <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <a href="simulator.html" style="display: block; margin-top: 1em"><button class="btn btn-primary" >Inizia la simulazione</button></a>
+                    </div>
+        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+</div>
+
+
+</body>
+
+<!-- Mirrored from clicktrainermagnani.altervista.org/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Mar 2019 01:10:07 GMT -->
+</html>
