@@ -47,7 +47,9 @@
 
     <script> 
     //set the starting date of the simulation and declare the variable "d" used throughout the whole simulator
-    var d = new Date();
+        function impd(){
+            var d = new Date();
+        }
     </script>
     <script src="js/simujs.js"></script>
    
@@ -81,7 +83,7 @@
 </style>
 </head>
 
-<body>
+<body onload="impd();startSimu();">
 <div class="container container-fluid" style="margin-top: 3em">
     <div class="row" id="timer">
         <div class="col-sm-1"></div>
