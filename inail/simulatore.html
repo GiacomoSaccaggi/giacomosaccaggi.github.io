@@ -105,6 +105,23 @@ input[type=text] {
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>  
 <script type="text/javascript">  
 function startSimulazione () {
+	var d = new Date();
+
+var n1 = String(d.getUTCDate());
+
+var n2 = String(d.getUTCMonth());
+
+var n3 = String(d.getUTCFullYear());
+
+var n4 = d.getUTCHours();
+
+n4=String(n4+2);
+	
+var n5 = d.getUTCMinutes();
+
+n5=String(n5+1);
+
+document.getElementById("demo").innerHTML = n1+"/"+n2+"/"+n3+" alle ore "+n4+":"+n5;
 var test = document.getElementById("capire").innerHTML
             var test2 = document.getElementById("capire2").innerHTML
             var str = new Date().toLocaleString();
@@ -128,21 +145,7 @@ var test = document.getElementById("capire").innerHTML
 function loadciao () {
 key('cmd+r, cmd+e,ctrl+f5, ctrl+r, a ,f5', function(){
     startSimulazione ();
-var d = new Date();
 
-var n1 = String(d.getUTCDate());
-
-var n2 = String(d.getUTCMonth());
-
-var n3 = String(d.getUTCFullYear());
-
-var n4 = String(d.getUTCHours());
-
-var n5 = d.getUTCMinutes();
-
-n5=String(n5+1);
-
-document.getElementById("demo").innerHTML = n1+"/"+n2+"/"+n3+" alle ore "+n4+":"+n5;
     return false
 });
 };
@@ -223,30 +226,6 @@ document.getElementById("demo").innerHTML = n1+"/"+n2+"/"+n3+" alle ore "+n4+":"
 
 
  
-
-
-
-<script>
-
-var d = new Date();
-
-var n1 = String(d.getUTCDate());
-
-var n2 = String(d.getUTCMonth());
-
-var n3 = String(d.getUTCFullYear());
-
-var n4 = String(d.getUTCHours());
-
-var n5 = d.getUTCMinutes();
-
-n5=String(n5+1);
-
-document.getElementById("demo").innerHTML = n1+"/"+n2+"/"+n3+" alle ore "+n4+":"+n5;
-
-</script>
-
-
 
 </center>
 
