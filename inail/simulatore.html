@@ -116,11 +116,11 @@ var test = document.getElementById("capire").innerHTML
             
             	if( test<minuti & test2==0){
 			
-  			var elem = document.getElementById("frame1");
-  			var elemEventHandler = function() { };
-  			elem.addEventListener("click", elemEventHandler , true);
-			$('selector').click(function(){return true;});
-            		start();
+  			
+  var elem = document.getElementById("frame1");
+  elem.style.display="block";
+  var att = document.getElementById("attesa");
+  att.style.display="none";
 			
                 document.getElementById("capire2").innerHTML = 1
             	};
@@ -128,6 +128,21 @@ var test = document.getElementById("capire").innerHTML
 function loadciao () {
 key('cmd+r, cmd+e,ctrl+f5, ctrl+r, a ,f5', function(){
     startSimulazione ();
+var d = new Date();
+
+var n1 = String(d.getUTCDate());
+
+var n2 = String(d.getUTCMonth());
+
+var n3 = String(d.getUTCFullYear());
+
+var n4 = String(d.getUTCHours());
+
+var n5 = d.getUTCMinutes();
+
+n5=String(n5+1);
+
+document.getElementById("demo").innerHTML = n1+"/"+n2+"/"+n3+" alle ore "+n4+":"+n5;
     return false
 });
 };
@@ -170,6 +185,72 @@ key('cmd+r, cmd+e,ctrl+f5, ctrl+r, a ,f5', function(){
 
   <div style="position:fixed;left:0%;top: 0%;"><button onclick="tempo();" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >SIMULAZIONE</button></div>
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<div class="main-content" id="attesa" style="display:none">
+
+<center>
+
+
+
+<img src="inail.png" style="width: 10%;">
+
+<hr>
+
+<BR>
+
+<h3 style="text-align: center;">SIETE IN ATTESA DI RICEVERE LA FORM PER L'INSERIMENTO DEL CODICE DOMANDA</h3>
+
+<br><hr><br>
+
+<h2><br>
+
+	Simulazione attiva a partire dal <font id="demo"> </font><br><br>
+
+    <p><font color="grey">(premere F5, ctrl+R, ⌘+R o ⌘+E finché appare la pagina di inserimento del codice)</font></p>
+
+	<p><i><font color="grey">(su Mac il giorno del click day funzionerà solo il comando ⌘+R)</font></i></p>
+
+</h2>
+
+
+
+ 
+
+
+
+<script>
+
+var d = new Date();
+
+var n1 = String(d.getUTCDate());
+
+var n2 = String(d.getUTCMonth());
+
+var n3 = String(d.getUTCFullYear());
+
+var n4 = String(d.getUTCHours());
+
+var n5 = d.getUTCMinutes();
+
+n5=String(n5+1);
+
+document.getElementById("demo").innerHTML = n1+"/"+n2+"/"+n3+" alle ore "+n4+":"+n5;
+
+</script>
+
+
+
+</center>
+
+<div>
 
 </body>
 </html>
