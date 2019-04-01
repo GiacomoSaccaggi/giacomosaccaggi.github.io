@@ -18,6 +18,7 @@ function startSimu (d) {
         $('#timer').show(); 
      }
     }, 200);
+    $('#form').show();
     //every time that this function is activated the both the question type and the code to insert are chosen by random functions
     simunumber = Math.floor(Math.random() * 4) + 1;
     codrandom1 = Math.random().toString(36).substring(2, 6);
