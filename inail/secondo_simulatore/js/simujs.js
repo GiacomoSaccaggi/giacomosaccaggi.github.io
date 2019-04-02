@@ -47,12 +47,22 @@ function submitcode () {
     }
 }
 
+// prova di nuovo
+function provadinuovo () {
+     var c = document.getElementById("nomemail").value;
+     document.location.href = "simulator.html";
+     window.setInterval(function(){
+      document.getElementById("nomemail").value= c;
+    }, 2000);
+}
+
+
 //calculate and visualize the results
 function endSimu (d) {
     var timespent = new Date() - d;
     document.getElementById("timeresult").innerHTML = timespent/1000;
-    var c = document.getElementById("nomemail").value
-    var pre="Provagenerale-"
+    var c = document.getElementById("nomemail").value;
+    var pre="Provagenerale-";
     var i = timespent/1000;
 
 
