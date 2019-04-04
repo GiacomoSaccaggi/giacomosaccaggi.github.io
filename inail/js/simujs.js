@@ -7,17 +7,7 @@ var simunumber = 1;
 
 // when the refresh key is pressed simulate the refresh of the page
 function startSimu (d) {
-     $('#timer').hide();
-     $('#form').hide();
-     setTimeout(function(){
-    //then check the time to assess whether to show the form
-     if (new Date() > d) {
-        $('#form').show();
-     }
-     else {
-        $('#timer').show(); 
-     }
-    }, 200);
+     
     $('#timer').hide();
     $('#form').show();
     //every time that this function is activated the both the question type and the code to insert are chosen by random functions
