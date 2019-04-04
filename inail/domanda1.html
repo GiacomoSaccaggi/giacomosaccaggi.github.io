@@ -2,7 +2,6 @@
 <html>
     <title>Click Day Simulator</title>
     <link rel="shortcut icon" href="#">
-    <link href="tools/style.css" rel="stylesheet" type="text/css" media="screen" />
 
 
 
@@ -44,24 +43,11 @@
 
 <script>
 
-    function loadciao () {
-
-
-
-key('cmd+r, cmd+e,ctrl+f5, ctrl+r, a ,f5', function(){
-
-
-
-
-
+function loadciao () {
+    key('cmd+r, cmd+e,ctrl+f5, ctrl+r, a ,f5', function(){
+    loader();
     return false
-
-
-
-});
-
-
-
+    });
 };
 
     </script>
@@ -99,7 +85,7 @@ key('cmd+r, cmd+e,ctrl+f5, ctrl+r, a ,f5', function(){
 <script type='text/javascript'>function finito_locale() {var r = document.getElementById('risultato');var rb = document.getElementById('risultato2');var p = document.getElementById('nome');var k = document.getElementById('ke');text = p.elements[1].value;if(text==="bianco"){r.innerHTML = '';}else{r.innerHTML = 'ATTENZIONE! La risposta alla domanda era sbagliata';k.innerHTML = 'errore';};text1 = p.elements[0].value;if(text1==='+5g3422739c53casced46afce754ad713d34da03f19ead5321afa19afdbf7c996'){rb.innerHTML = '';}else{rb.innerHTML = 'ATTENZIONE! Ti sei dimenticato di copiare il codice cliente';k.innerHTML = 'errore';};};</script>
 
 </head>
-<body onload="loader();">
+<body onload="loader();loadciao();">
 
 <div class="main-content">
 <div id="troppo" style="display:none;"> 
@@ -143,19 +129,21 @@ SPORTELLO INFORMATICO PER L'INVIO DELLA DOMANDA ONLINE
   Inserisci il tuo Codice Aziendale:<br>
   
   
-<input type='text' name='codice' value='  '><br><br> Di che colore era il cavallo bianco di Napoleone: <br>
+<input type='text' name='codice' value=''><br><br>Di che colore era il cavallo bianco di Napoleone:<br>
   
-  <input type="text" name="parola" value="" >
-  <br><br>
+  <input type="text" name="parola" value="" id="wage">
+  <br>
 </form> 
    
-   
-   <button onclick="finito()">Invia richiesta</button>
+<span id="qualcherr" style="display:none;">C'è un errore nella compilazione della richiesta.</span><br>
+
+<button onclick='conferma()'>Invia richiesta</button><script>var wage = document.getElementById('wage');
+wage.addEventListener('keydown', function (e) {if (event.keyCode == 13) {conferma();}})</script>
    <br><br>
-   
+<script>function conferma(){var sicuro = confirm('Sei sicuro di voler procedere?');if (sicuro == true){finito();}else{return false;}}
+</script>
 </center>
 <hr><br><br>
-
 
 </div>
 </div>
