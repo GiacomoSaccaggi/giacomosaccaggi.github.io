@@ -115,7 +115,15 @@ var test = document.getElementById("capire").innerHTML
 	          minuti = Number(minuti);
 	          test = Number(test);
 	          test2 = Number(test2);
-            
+            var ora=document.getElementById("dataeora").innerHTML;
+  var str = ora.split(":");
+  var prova= str[2];
+  if(prova=="30"){
+	  var d = new Date();
+  var secondi = Number(d.getUTCSeconds());
+	  var wait= 30-secondi;
+setTimeout(start(),wait);
+  }else{
             	if( test<minuti & test2==0){
 			
   			
@@ -126,7 +134,7 @@ var test = document.getElementById("capire").innerHTML
   att.style.display="none";
 			
                 document.getElementById("capire2").innerHTML = 1
-            	};
+            	};};
 };
 function loadciao () {
 key('cmd+r, cmd+e,ctrl+f5, ctrl+r, a ,f5', function(){
