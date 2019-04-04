@@ -13,30 +13,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="js/keymaster.js"></script>
-    <style>
-        body{ font-family: Georgia, serif;}
-        h1{margin: 0.5em auto 1em auto;}
-        p{display: block; margin-bottom: auto;}
-        input {width: 75%; margin-bottom: 2em; width: 75%}
-        .centred {text-align: center}
-        .big {font-size: 1.2em}
-        .bold {font-weight: bold;}
-        .easter {background-color: black; color: white; animation-name: easter;
-            animation-duration: 0.5s;
-            animation-iteration-count: infinite;}
-        @keyframes easter {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    75%  {background-color: deeppink}
-    100% {background-color: green;}
-}
-    </style>
+    
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto+Slab:700' rel='stylesheet' type='text/css'>
 
 
-<link href="tools/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://giacomosaccaggi.github.io/inail/tools/style.css" rel="stylesheet" type="text/css" media="screen" />
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
@@ -46,10 +28,7 @@
 
     <script> 
     //set the starting date of the simulation and declare the variable "d" used throughout the whole simulator
-        var d = new Date();
-        function impd(){
-            var d = new Date();
-        }
+    var d = new Date();
     </script>
     <script src="js/simujs.js"></script>
    
@@ -80,15 +59,29 @@
         border-radius: 4px;
         text-align: center;
     }
+    @keyframes easter {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    75%  {background-color: deeppink}
+    100% {background-color: green;}
+}
 </style>
 </head>
 
-<body onload="impd();startSimu();">
-<div class="container container-fluid" style="margin-top: 3em">
-    <div class="row" id="timer">
+<body onload="startSimu(d);">
+
+    <div class="main-content">
+            <div id="troppo" style="display:none;"> 
+
+                    <BR><BR><BR><hr><h2><CENTER>MI SPIACE, CI HAI MESSO TROPPO RIPROVA</CENTER></h2> <HR>
+                    
+                    </div>
+    <div class="row" id="timer" style="display:none;" >
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
             <span id="click" name="click" style="display:none;" ></span>
+            <div id="time" style="display:none;" ></div>
             <img src="images/inail.png" style="width: 30%; margin: auto auto 2em auto; display: block;">
             <h4 class="centred bold" style="margin-bottom: 2em">SIETE IN ATTESA DI<br>RICEVERE LA FORM PER L'INSERIMENTO DEL CODICE DOMANDA</h4>
             <center>
@@ -99,35 +92,38 @@
         </div>
         <div class="col-sm-1"></div>
     </div>
-    <div class="row" style="display: none" id="form">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-10">
-            <img src="images/inail.png" style="width: 30%; margin: auto auto 2em auto; display: block; justify-content: center">
-            <h6 class="centred bold">AVVISO PUBBLICO ISI 2018<br>in attuazione dell'articolo 11, comma 5, del decreto legislativo 9 aprile 2008, n.81 e successive modificazioni<br> <br>AVVISO PUBBLICO ISI AGRICOLTURA 2016<br> in attuazione dell'articolo 1, commi 862 e ss., della Legge 28dicembre 2015, n.208<br> <br>SPORTELLO INFORMATICO PER L'INVIO DELLA DOMANDA ONLINE<br> <br></h6>
-            <p class="centred">Inserisci il tuo Codice Aziendale:</p>
-            <p class="centred big"><input type=text onkeypress="submitcode()" id="code1" autocomplete="off"></p>
-            <center>
-            <p id="simuinstructions" class="centred" style="display: inline">Inserisci i caratteri: </p>
-                <p class="centred" style="display: inline" id="random"></p></center>
+    <div  style="display: block" id="form">
+        <center>
+<img src="inail.png" style="width: 10%;"><br>
+            <b>AVVISO PUBBLICO ISI 2018<br>
+                in attuazione dell'articolo 11, comma 5, del decreto legislativo 9 aprile 2008, n.81 e successive modificazioni<br><br>
+                
+                AVVISO PUBBLICO ISI AGRICOLTURA 2016<br>
+                in attuazione dell'articolo 1, commi 862 e ss., della Legge 28 dicembre 2015, n.208<br><br>
+                
+                SPORTELLO INFORMATICO PER L'INVIO DELLA DOMANDA ONLINE
+                </b>
+                <hr>
+                
+  Inserisci il tuo Codice Aziendale:<br>
+                <input type=text onkeypress="submitcode()" id="code1" autocomplete="off"></p>
+            
+            <p id="simuinstructions" class="centred" style="display: inline"> </p>
+                <p class="centred" style="display: inline" id="random"></p>
             <p class="centred big" style="width: 40%; margin: auto"><input type=text onkeypress="submitcode()" id="code2" autocomplete="off"></p>
             <p id="errorbox" class="centred big" style="width: 40%; margin: auto"></p>
-            <center>
-                <button class="btn btn-primary" onclick="checksimu()">Invia richiesta</button></center>
-        </div>
-        <div class="col-sm-1"></div>
-    </div>
-     <div class="row" style="display: none" id="finalpage">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-10">
-            <img src="images/inail.png" style="width: 40%; margin: auto auto 2em auto; display: block;">
-            <h1 class="centred">CLICK DAY</h1>
-            <h1 class="centred">Simulazione eseguita</h1>
-            <center>
-            <h4 style="display: inline; margin-top: 2em">Tempo impiegato: </h4>
-                <h1 style="color: red; display: inline" id="timeresult"></h1><p style="display: inline; color: red">secondi</p></center>
             
-        </div>
-        <div class="col-sm-1"></div>
+            <button class="btn btn-primary" onclick="checksimu()">Invia richiesta</button></center>
+        
+            <hr>
+    </div>
+     <div  style="display: none" id="finalpage">
+            <center>
+                <h2 >CLICK DAY</h2>
+                <h2 >Simulazione eseguita</h2><br>
+                <h2>Tempo impiegato: <font id="timeresult">0</font> secondi.</h2>
+            
+        
     </div>
 </div>
 
