@@ -141,7 +141,7 @@ input[type=text] {
 <script type="text/javascript">  
 	function blink_one() { 
 document.getElementById('blink').style.visibility='visible'; 
-setTimeout('blink_two()',500); 
+ 
 } 
 function blink_two() { 
 document.getElementById('blink').style.visibility='hidden'; 
@@ -150,7 +150,7 @@ setTimeout('blink_one()',500);
 	
 function startSimulazione () {
 	
-blink_one();
+blink_two();
 var test = document.getElementById("capire").innerHTML
             var test2 = document.getElementById("capire2").innerHTML
             var str = new Date().toLocaleString();
