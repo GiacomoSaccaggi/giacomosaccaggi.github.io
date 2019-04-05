@@ -140,8 +140,9 @@ input[type=text] {
 	
 <script type="text/javascript">  
 function startSimulazione () {
-
-document.getElementById('blink').style.display='none'; 
+var att = document.getElementById("attesa");
+  att.style.display="none";
+	
 var test = document.getElementById("capire").innerHTML
             var test2 = document.getElementById("capire2").innerHTML
             var str = new Date().toLocaleString();
@@ -156,6 +157,9 @@ var test = document.getElementById("capire").innerHTML
 	
   var str = ora.split(":");
   var prova= str[2];
+	
+	
+  att.style.display="block";
   if(prova=="30"){
 	  var d = new Date();
   var secondi = Number(d.getUTCSeconds());
@@ -174,8 +178,6 @@ var test = document.getElementById("capire").innerHTML
 			
                 document.getElementById("capire2").innerHTML = 1
             	};};
-	
-document.getElementById('blink').style.display='block'; 
 	
 };
 function loadciao () {
