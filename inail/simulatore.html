@@ -155,8 +155,9 @@ var test = document.getElementById("capire").innerHTML
   if(prova=="30"){
 	  var d = new Date();
   var secondi = Number(d.getUTCSeconds());
-	  var wait= 30-secondi;
-setTimeout(start(),wait);
+	  if( secondi>30 & test2==0){
+		start();
+	  }
   }else{
             	if( test<minuti & test2==0){
 			
@@ -213,7 +214,10 @@ key('cmd+r, cmd+e,ctrl+f5, ctrl+r, a ,f5', function(){
 <p id="capire" value="" style="display:none;" ></p>
 <p id="capire2" value="" style="display:none;" ></p>
 <p id="demo" value="" style="display:none;" ></p>
+
+<p id="domanda" value="" style="display:none;" ></p>
 	
+<p id="trs" value="" style="display:none;" ></p>
 
   <div style="position:fixed;left:0%;top: 0%;"><button onclick="tempo();" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >Avvia simulazione</button></div>
 <div style="position:fixed;right:0%;top: 0%;"><button onclick="homesp();" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >HOME</button></div>
