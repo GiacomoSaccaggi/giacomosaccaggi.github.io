@@ -141,22 +141,19 @@ input[type=text] {
 <script type="text/javascript">  
 function startSimulazione () {
 
-document.getElementById('blink').style.visibility='hidden'; 
+document.getElementById('blink').style.display='none'; 
 var test = document.getElementById("capire").innerHTML
             var test2 = document.getElementById("capire2").innerHTML
             var str = new Date().toLocaleString();
 	
-document.getElementById('blink').style.visibility='visible'; 
             var str = str.split(":");
             var minuti = str[1];
 	          minuti = Number(minuti);
 	
-document.getElementById('blink').style.visibility='hidden'; 
 	          test = Number(test);
 	          test2 = Number(test2);
             var ora=document.getElementById("dataeora").innerHTML;
 	
-document.getElementById('blink').style.visibility='visible'; 
   var str = ora.split(":");
   var prova= str[2];
   if(prova=="30"){
@@ -177,6 +174,8 @@ document.getElementById('blink').style.visibility='visible';
 			
                 document.getElementById("capire2").innerHTML = 1
             	};};
+	
+document.getElementById('blink').style.display='block'; 
 	
 };
 function loadciao () {
