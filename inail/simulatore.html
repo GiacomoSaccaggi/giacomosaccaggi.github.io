@@ -170,7 +170,17 @@ var test = document.getElementById("capire").innerHTML
 	  var d = new Date();
   var secondi = Number(d.getUTCSeconds());
 	  if( secondi>30 & test2==0){
-		start();
+				
+
+  var elem = document.getElementById("frame1");
+
+  elem.style.display="block";
+
+			start();
+
+  var att = document.getElementById("attesa");
+
+  att.style.display="none";
 	  }
   }else{
             	if( test<minuti & test2==0){
