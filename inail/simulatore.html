@@ -139,16 +139,18 @@ input[type=text] {
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
 	
 <script type="text/javascript">  
-	function sleep(miliseconds) {
-                var currentTime = new Date().getTime();
-                while (currentTime + miliseconds >= new Date().getTime()) {
-                }
-            }
+	function blink_one() { 
+document.getElementById('blink').style.visibility='visible'; 
+setTimeout('blink_two()',500); 
+} 
+function blink_two() { 
+document.getElementById('blink').style.visibility='hidden'; 
+setTimeout('blink_one()',500); 
+} 
 	
 function startSimulazione () {
-var att = document.getElementById("attesa");
-  att.style.display="none";
 	
+blink_one();
 var test = document.getElementById("capire").innerHTML
             var test2 = document.getElementById("capire2").innerHTML
             var str = new Date().toLocaleString();
@@ -164,8 +166,6 @@ var test = document.getElementById("capire").innerHTML
   var str = ora.split(":");
   var prova= str[2];
 	
-	sleep(500);
-  att.style.display="block";
   if(prova=="30"){
 	  var d = new Date();
   var secondi = Number(d.getUTCSeconds());
