@@ -76,13 +76,19 @@ function loadciao () {
 
          button:hover {opacity: 1}
         input[type=text] {
-            width: 50%;
             padding: 12px 20px;
             margin: 8px 0;
             box-sizing: border-box;
             border: 2px solid dodgerblue;
             border-radius: 4px;
             text-align: center;
+        }
+        
+        .testo {
+            width: 50%;
+        }
+        .risp {
+            width: 20%;
         }
 @keyframes easter {
     0%   {background-color: red;}
@@ -95,7 +101,7 @@ function loadciao () {
 <script src="https://giacomosaccaggi.github.io/inail/funzione.js">
 </script>
 
-<script type='text/javascript'>function finito_locale() {var r = document.getElementById('risultato');var rb = document.getElementById('risultato2');var p = document.getElementById('nome');var k = document.getElementById('ke');text = p.elements[1].value;if(text==="a3k"){r.innerHTML = '';k.innerHTML = '';}else{r.innerHTML = 'ATTENZIONE! La risposta alla domanda era sbagliata';k.innerHTML = 'errore';};text1 = p.elements[0].value;if(text1==='+5g3422739c53casced46afce754ad713d34da03f19ead5321afa19afdbf7c996'){rb.innerHTML = '';k.innerHTML = '';}else{rb.innerHTML = 'ATTENZIONE! Ti sei dimenticato di copiare il codice cliente';k.innerHTML = 'errore';};if(text==="a3k" && text1==='+5g3422739c53casced46afce754ad713d34da03f19ead5321afa19afdbf7c996'){k.innerHTML = '';}else{k.innerHTML = 'errore';};};</script>
+<script type='text/javascript'>function finito_locale() {var r = document.getElementById('risultato');var rb = document.getElementById('risultato2');var p = document.getElementById('nome');var k = document.getElementById('ke');text = String(p.elements[1].value);if(text==="a3k"){r.innerHTML = '';k.innerHTML = '';}else{r.innerHTML = 'ATTENZIONE! La risposta alla domanda era sbagliata';k.innerHTML = 'errore';};text1 = p.elements[0].value;if(text1==='+5g3422739c53casced46afce754ad713d34da03f19ead5321afa19afdbf7c996'){rb.innerHTML = '';k.innerHTML = '';}else{rb.innerHTML = 'ATTENZIONE! Ti sei dimenticato di copiare il codice cliente';k.innerHTML = 'errore';};if(text==="a3k" && text1==='+5g3422739c53casced46afce754ad713d34da03f19ead5321afa19afdbf7c996'){k.innerHTML = '';}else{k.innerHTML = 'errore';};};</script>
 
 </head>
 <body onload="loader();loadciao();">
@@ -148,7 +154,7 @@ SPORTELLO INFORMATICO PER L'INVIO DELLA DOMANDA ONLINE
   Inserisci il tuo Codice Aziendale:<br>
   
   
-<input type='text' name='codice' value='' ><br><br>inserire i primi tre caratteri tra le parentesi: (a3khg)<br><input type='text' name='parola' value='' id='wage' maxlength='3' >
+<input type='text' class='testo' name='codice' value='' ><br><br>inserire i primi tre caratteri tra le parentesi: (a3khg)<br><input type='text' class='risp' name='parola' value='' id='wage' maxlength='3' >
   
   
   <br>
