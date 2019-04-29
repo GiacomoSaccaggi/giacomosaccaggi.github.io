@@ -173,10 +173,11 @@ var test = document.getElementById("capire").innerHTML
 				
 
   var elem = document.getElementById("frame1");
-
+if( elem.style.display=="none"){
+			start();
+}
   elem.style.display="block";
 
-			start();
 
   var att = document.getElementById("attesa");
 
@@ -187,8 +188,11 @@ var test = document.getElementById("capire").innerHTML
 			
   			
   var elem = document.getElementById("frame1");
-  elem.style.display="block";
+if( elem.style.display=="none"){
 			start();
+}
+  elem.style.display="block";
+			
   var att = document.getElementById("attesa");
   att.style.display="none";
 			
