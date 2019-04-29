@@ -134,15 +134,21 @@ SPORTELLO INFORMATICO PER L'INVIO DELLA DOMANDA ONLINE
   * Inserisci il codice identificativo:<br>
   
   
-<input type='text' class='testo' name='codice' value='' autocomplete='off'><br><br>* Scrivi la parola all'interno delle virgolette "(gatto)":<br><input type='text' class='risp' name='parola' value='' id='wage' maxlength='7' autocomplete='off'>
+<div class="error"><pre class="knitr r">## Error in if (is.na(riempimento) == T) {: l'argomento ha lunghezza zero
+</pre></div>
+<input type='text' class='testo' name='codice' value='' autocomplete='off'><br><br>* Inserire i caratteri all'interno delle virgolette "(gatto)":<br><input type='text' class='risp' name='parola' value='' id='wage' maxlength='7' autocomplete='off'>
   
   
   <br>
 </form> 
    
-<span id="qualcherr" style="display:none;">* campo obbligatorio</span><br>
+<span id="qualcherr" style="display:none;background:tomato;"> <br>* campo obbligatorio</span><br>
 
-<button onclick='conferma()'>Invio</button><script>function conferma(){var sicuro = confirm('Sei sicuro di voler procedere?');if (sicuro == true){finito();}else{return false;}}</script><script>var wage = document.getElementById('wage');wage.addEventListener('keydown', function (e) {if (event.keyCode == 13) {conferma();}})</script>
+<div class="error"><pre class="knitr r">## Error in if (is.na(riempimento) == T) {: l'argomento ha lunghezza zero
+</pre></div>
+<div class="error"><pre class="knitr r">## Error in if (conferma == 0) {: l'argomento ha lunghezza zero
+</pre></div>
+
    <br><br>
 
 </center>
