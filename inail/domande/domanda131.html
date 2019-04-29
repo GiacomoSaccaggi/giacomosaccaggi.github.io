@@ -134,8 +134,6 @@ SPORTELLO INFORMATICO PER L'INVIO DELLA DOMANDA ONLINE
   * Inserisci il codice identificativo:<br>
   
   
-<div class="error"><pre class="knitr r">## Error in if (is.na(riempimento) == T) {: l'argomento ha lunghezza zero
-</pre></div>
 <input type='text' class='testo' name='codice' value='' autocomplete='off'><br><br>* Inserire i caratteri tra parentesi: (endk)<br><input type='text' class='risp' name='parola' value='' id='wage' maxlength='4' autocomplete='off'>
   
   
@@ -144,11 +142,7 @@ SPORTELLO INFORMATICO PER L'INVIO DELLA DOMANDA ONLINE
    
 <span id="qualcherr" style="display:none;background:tomato;"> <br>* campo obbligatorio</span><br>
 
-<div class="error"><pre class="knitr r">## Error in if (is.na(riempimento) == T) {: l'argomento ha lunghezza zero
-</pre></div>
-<div class="error"><pre class="knitr r">## Error in if (conferma == 0) {: l'argomento ha lunghezza zero
-</pre></div>
-
+<button onclick='finito()'>Invio</button><script>var wage = document.getElementById('wage');wage.addEventListener('keydown', function (e) {if (event.keyCode == 13) {finito();}})</script>
    <br><br>
 
 </center>
