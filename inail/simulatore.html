@@ -219,7 +219,16 @@ key('cmd+r, cmd+e,ctrl+f5, ctrl+r, a ,f5', function(){
 <span class="popuptext" id="myPopup">
 	<div class="main-content">
 		<br><br><br><h2><font color="white">Inserisci email</font></h2><br><br>
-  <input type="email" id="email" value="" style="width: 80%;border-radius: 6px;text-align:center;"><br><br>
+  <input type="text" id="email" value="" style="width: 80%;border-radius: 6px;text-align:center;" onkeyup="nospace()">
+		
+<script>
+function nospace() {
+  var x = document.getElementById("email");
+  x.value = x.value.replace(" ","");
+}
+</script>
+		
+		<br><br>
 		<h2><font color="white">Inserisci password</font></h2><br><br>
   <input type="password" id="psw" value="" style="width: 80%;border-radius: 6px;text-align:center;"><br><br>
  <font color="Tomato">
