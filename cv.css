@@ -59,16 +59,16 @@
 
 
 /**********
-/* Header
+/* .alto
 **********/
-	header[role=banner] {
+	.alto[role=banner] {
 		background:#fff;
 		border-bottom:4px solid #33a4c9;
 		padding: 19px 0;
 		overflow: hidden;
 	}
 	
-	header figure {
+	.alto figure {
 		border: 3px solid #eee;
 		border-radius: 78px;
 		float: right;
@@ -76,24 +76,24 @@
 		width: 156px;
 	}
 	
-	header figure img {
+	.alto figure img {
 		border-radius: 75px;
 		height: 150px;
 		position: relative;
 		width: 150px;
 	}
 	
-	header hgroup {
+	.alto hgroup {
 		float: left;
 		padding: 42px 0;
 	}
 	
-	header hgroup h1 {
+	.alto hgroup h1 {
 		color:#555;
 		font-family:'DroidSansBold', Arial, sans-serif;
 	}
 	
-	header hgroup h2 {
+	.alto hgroup h2 {
 		color:#cecece;
 		font-style: italic;
 		text-shadow: 1px 1px 0 rgba(0,0,0,.3);
