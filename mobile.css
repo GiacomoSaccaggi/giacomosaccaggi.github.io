@@ -16,29 +16,29 @@ Créateur : Christophe HERMANN (@chrishrmnn)
 */
 
 /**********
-/* Header
+/* .alto
 **********/
-	header[role=banner] {
+	.alto[role=banner] {
 		background:#fff;
 		border-bottom:4px solid #33a4c9;
 		padding: 19px 0;
 		overflow: hidden;
 	}
 	
-	header figure {
+	.alto figure {
 		display: none;
 	}
 	
-	header hgroup {
+	.alto hgroup {
 		text-align: center;
 	}
 	
-	header hgroup h1 {
+	.alto hgroup h1 {
 		color:#555;
 		font-family:'DroidSansBold', Arial, sans-serif;
 	}
 	
-	header hgroup h2 {
+	.alto hgroup h2 {
 		color:#cecece;
 		font-style: italic;
 		line-height: 30px;
