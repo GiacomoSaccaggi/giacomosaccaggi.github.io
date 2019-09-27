@@ -74,6 +74,7 @@
 		float: right;
 		height: 156px;
 		width: 156px;
+		display: block;
 	}
 	
 	.alto figure img {
