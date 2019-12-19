@@ -1,6 +1,8 @@
 function traduci(){
 
 var parola = document.getElementById("parola").value;
+parola = parola.toLowerCase();
+parola = parola.split(' ').join('');
 var traduzione = '';
 
 
@@ -1425,4 +1427,5 @@ else{alert('...non esiste questa parola nel linguaggio elfico!!!');
 }
 
     document.getElementById("traduzione").innerHTML = traduzione;
+    window.scrollBy(0, 180);
 }

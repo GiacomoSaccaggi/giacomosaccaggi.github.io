@@ -82,7 +82,7 @@
 
 </head>
 
-<body>
+<body id="body">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -149,6 +149,20 @@
 
     <hr>
 
+<script>
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+
+var input = document.getElementById("body");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 71 && event.ctrlKey  ) {
+        openInNewTab('https://giacomosaccaggi.github.io/Dizionarioelfico.html');
+     
+  }
+});
+</script>
     <!-- Footer -->
     <footer>
        <div class="container">
