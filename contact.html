@@ -10,9 +10,9 @@
     <meta name="author" content="">
 
 <title>Giacomo Saccaggi</title>
-
  <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/413/413772.png" />
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147261423-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -24,7 +24,6 @@
 
 <link rel="stylesheet" href="reset.css">
 <link rel="stylesheet" href="cv.css">
-
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -35,6 +34,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -78,9 +78,11 @@
 
 </style>
 
+
+
 </head>
 
-<body>
+<body id="body">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -88,7 +90,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only"></span>
+                    <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="index.html">Home</a>
@@ -117,14 +119,16 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
-                        <h1>Contact me</h1><br>
+                        <h1>About Me</h1>
                         <hr class="small">
+                        <span class="subheading">This is what I do.</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-<!-- Main Content -->
+
+    <!-- Main Content -->
     <div class="container">
         <div class="row">
             <div class="alto">
@@ -143,28 +147,22 @@
         </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h2>Se il mio profilo vi interessa, non esitate a contattarmi:<br><br>
-
-                I miei contatti:</h2>
-				<h3>
-				<ul>
-					<li class="lieu" >Milano, Italia</li> <br><br>
-					<li class="phone">+39  389 265 9845</li><br><br>
-					<li class="mail"><a href="mailto:giacomo.saccaggi@gmail.com">giacomo.saccaggi@gmail.com</a></li><br><br>
-				</ul>
-</h3>
-
-
-    </div>
-</div>
-</div>
-
-
     <hr>
+
+<script>
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+
+var input = document.getElementById("body");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 71 && event.ctrlKey  ) {
+        openInNewTab('https://giacomosaccaggi.github.io/Dizionarioelfico.html');
+     
+  }
+});
+</script>
     <!-- Footer -->
     <footer>
        <div class="container">
@@ -201,6 +199,19 @@
             </div>
         </div>
     </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
 
 </body>
 
