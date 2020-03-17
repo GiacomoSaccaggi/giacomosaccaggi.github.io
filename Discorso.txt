@@ -1,0 +1,80 @@
+
+Slide 01:
+Il sistema industriale odierno sta migrando sempre pi`u verso materie prime riciclate. In questo contesto il riciclo e la raccolta differenziata ricoprono un’importanza cruciale. L’obbiettivo di questo lavoro vuole essere quello di affrontare il problema della raccolta differenziata con un approccio scientifico e proporre alcune idee e soluzioni di come il Data Science possa essere d’aiuto nel riuscire a migliorare lo sfruttamento delle risorse. Le domande della ricerca, quindi, sono due: “Come si può analizzare la raccolta differenziata come un problema di classificazione statistica?” e “Quali applicazioni potrebbero essere implementate con l’utilizzo dei modelli previsionali?”.
+
+
+
+
+
+Slide 02:
+Per rispondere a tali domande si è deciso di strutturare il lavoro in tre fasi: Raccolta dei dati, creazione di modelli previsionali ed infine combinare i modelli previsionali attraverso modelli di ensemble learning.
+
+
+
+
+Slide 03:
+Nella prima fase, si è deciso di reperire i dati per poter classificare i rifiuti utilizzando tre strategie: Web Scraping, programmazione di un Chat Bot di Telegram e costruzione di un cestino che potesse registrare i dati dei rifiuti.
+
+
+
+
+Slide 04:
+Il Web Scraping è stata scelta come strategia iniziale perchè il Web costituisce una fonte quasi infinita di dati (in questo caso di immagini) e non usarlo sarebbe stata una scelta che avrebbe portato all’esclusione di risorse determinanti. In questa fase è stato possibile raccoglere più di quaranta mila immagini di centoventinove categorie differenti raggruppate succesivamente in dieci macrocategorie.
+
+
+
+
+
+Slide 05:
+Il Bot di Telegram è stato scelto come strumento per avere immagini più precise riguardo alle macrocategorie più comuni di rifiuti, quali: carta, plastica e vetro. Sul Chatbot di Telegram sono state inviate più di mille trecento foto.
+
+
+
+
+
+Slide 06:
+Infine, si è deciso di costruire un cestino così da poter raccogliere dei dati sperimentali reputati importanti nel classificare gli oggetti. Come tecnologia di implementazione in questa prima fase si è deciso di utilizzare la piattaforma hardware Arduino per la sua semplicità e  versatilità. Per la realizzazione di questa parte del progetto, è stato necessario costruire un software che fosse in grado di registrare e salvare i dati inviati dall’Arduino così da automatizzare e sveltire il più possibile il processo di costruzione del dataset. Con questa terza tipologia di indagine è stato possibile raccogliere, oltre alle foto, delle informazioni strutturate relative a 2000 rifiuti. si è valutato come l'oggetto inserito all'interno del cestino reagisse alla luce agli ultrasuoni legando queste informazioni al colore e al peso del rifiuto. In particolare, grazie a due fotoresistenze si è stati in grado di raccogliere le informazioni relative alla quantità di luce che attraversa l’oggetto. Due moduli ad ultrasuoni sono stati posizionati in modo tale da ricevere e trasmettere il segnale in tutta l’area oggetto dell’indagine per tentare di misurare le differenti modalità con cui cadono i rifiuti nel cestino. Il sensore HX711 restituisce come informazione il peso del rifiuto. Il sensore TCS3200, infine, è un componente utilizzato allo scopo di individuare quali colori sono presenti nel suo campo visivo
+
+
+
+
+Slide 07:
+Una volta finita la fase di raccolta dei dati si è pensato a dei modelli previsivi che potessero identificare il materiale del rifiuto in base alle caratteristiche. Nella costruzione di modelli previsivi si sono utilizzati differenti algoritmi di Machine Learning in base alla natura del dato. Per quanto riguarda i dati strutturati si è deciso di utilizzare il Gradient Boosting Machine e il Multi-Layer Perceptron per valutare come una struttura ad albero ed una a reti potessoro comportortarsi sperimentalmente coi dati. Mentre per i dati non strutturati si è deciso di utilizzare la resnet che è una architettura di rete neurale convoluzionale, inventata da microsoft research nel 2015, che ha rivoluzionato l'utilizzo di reti neurali convoluzionali aggiungendo dei blocchi residui che permettono alla rete di gestire meglio le informazioni e la perdita di significatività dei pesi all'aumentare dei layer.
+
+
+
+
+Slide 08:
+Per quanto riguarda i dati strutturati, dopo opportune operazioni di preprocessing, si sono addestrati gli algoritmi, modificando specificatamente i parametri di tuning per riuscire a creare un predittore accurato, su un training set di dimensione di 1500 unità per poi testarlo sulle rimanenti 500. Come si può osservare dalle tabelle presenti nella slide i due previsori hanno delle buone performance. In particolare si può notare come il GBM abbia un accuratezza maggiore dello 0.95 e una precisione nelle singole categorie sempre maggiore dello 0.9.
+
+
+
+
+
+Slide 09:
+Per quanto riguarda i dati non strutturati, dopo aver tolto la media dalle immagini per far risaltare le caratteristiche che le contraddistinguono, si sono addestrati le due resnet, utilizzando una struttura ResNet 18 che mette in equilibrio velocità di processamento e precisione del risultato. Le tabelle in slide dimostrano chiaramente che l'accuratezza è elevata e potenzialmente sembrano non overfittare.
+
+
+
+
+Slide 10:
+In quest'ultima parte si è pensato di utilizzare modelli di ensemble learning per aumentare l'accuratezza e la robustezza delle previsioni. Nello specifico per rispondere alla domanda della ricerca si sono create due applicazioni, una che potesse sfruttare sia dati strutturati che non e l'altra che lavorasse direttamente sull'immagine. Per raggiungere questo scopo è stato necessario creare un nuovo validation set e si sono utilizzati dei modelli stacking che sfruttano come meta-algoritmo il K-nearest neighbors.
+
+
+
+
+
+Slide 11:
+Come si può notare l’accuratezza migliora notevolmente con l’utilizzo del modello di Stacking. Le due reti neurali convoluzionali riescono ad essere armonizzate dal K-nearest neighbors riuscendo a raggiungere un accuratezza superiore al 90%. Il secondo modello utilizza come informazione aggiuntiva rispetto a quello appena descritto le previsioni del modello GBM costruito sui dati strutturati. L’inserimento nel modello di Ensemble Learning delle informazioni strutturate rende le previsioni più precise consentendo di raggiungere un accuratezza del 95%. I modelli addestrati in questa parte attraverso metodi di Stacking hanno il vantaggio di avere delle stime più robuste e più accurate rispetto a quelle della parte precedente. Il K-nearest neighbors riesce, quindi, ad essere un ottima scelta per la costruzione di modelli di secondo livello. La natura differente dei modelli e la flessibilità del meta-algoritmo scelto permette al modello di essere ragionevolmente più generalizzabile fuori dal test set. I problemi legati all’overfit, per quanto possibile in un problema di previsione, non aumentano rispetto ai singoli modelli in quanto le due architetture utilizzano immagini di natura differente inoltre, per evitare problemi di adattamento, il GBM utilizza informazioni non ricavabili in alcun modo dai modelli precedenti.
+
+
+
+
+Slide 12:
+A conclusione di questo studio siamo riusciti a creare due modelli previsivi che fornissero stime con un accuratezza superiore al 90% e che sfruttassero sia informazioni strutturate che non. inoltre rispettivamente a tali modelli abbiamo creato due applicazioni, un chatbot di telegram che riconoscesse l'oggetto dalla foto ed un cestino automatico di raccolta dei rifiuti, per trasmettere come il data science possa veramente essere d'aiuto nello sfruttamento delle risorse.
+
+
+Slide 13:
+Grazie per l'attenzione.
+
+
