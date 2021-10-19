@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<title>TaggingGS</title>
+ <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/413/413772.png" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147261423-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-147261423-1');
+</script>
+	
+<link rel="stylesheet" media="screen and (min-width:481px)" href="cv.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<meta charset="utf-8"/>
+<script src="Plotimpo_files/htmlwidgets-1.3/htmlwidgets.js"></script>
+<script src="Plotimpo_files/plotly-binding-4.9.0/plotly.js"></script>
+<script src="Plotimpo_files/typedarray-0.1/typedarray.min.js"></script>
+<script src="Plotimpo_files/jquery-1.11.3/jquery.min.js"></script>
+<link href="Plotimpo_files/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="Plotimpo_files/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="Plotimpo_files/plotly-htmlwidgets-css-1.46.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="Plotimpo_files/plotly-main-1.46.1/plotly-latest.min.js"></script>
+<style> 
+  .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  }
+  </style>
+</head>
+
+<body>
+
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                    <li>
+                        <a href="all.html">All projects</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('tagginggs.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h2>TaggingGS</h2>
+                        <hr class="small">
+                        <h5>Easy tag and automatic tagging</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+    
+            <br>
+            <h1>Assumption:</h1>
+            <p>It happens quite often that you want to create a forecasting model, of which you have the data but you have to divide them into categories before you can operate in a supervised way.</p>
+            
+            <h1>The goal of the project:</h1>
+            <p>The goal of this package is to make tagging procedures easier and offer help from AI to help with tagging. Specifically, the ultimate goal is to implement an automatic tagging in which you start tagging, and then it is done automatically asking for confirmation for those in doubt.</p>
+            
+            <h1>Package Installation and Use</h1>
+            <p>How to install TaggingGS from ZIP file:<br>
+            <ul><code>pip install https://github.com/GiacomoSaccaggi/TaggingGS/archive/refs/heads/main.zip</code></ul><br><br><br>
+            How to install TaggingGS from GIT:<br><br>
+            <ul><code>pip install git+https://github.com/GiacomoSaccaggi/TaggingGS.git#egg=TaggingGS</code></ul><br><br><br>
+            How to install TaggingGS with clone folder:<br><br>
+            <ul>
+            <li>Unzip the archive</li>
+            <li>cd into the unzipped folder from the console</li>
+            <li>type in the console "<code>pip install .</code>" to install the package locally</li>
+            </ul><br><br><br>
+
+            How to use tagginggs:
+            <ul>
+                1. Import the package with the following code:<br><br>
+
+                <ul><code>>>> from tagginggs import run_tagging_app</code></ul><br><br><br>
+
+
+                    
+                2. Create flask app:<br><br>
+
+                <ul><code>>>> app = run_tagging_app()</code></ul><br><br><br>
+
+
+
+                3. Run flask app:<br><br>
+
+                <ul><code>>>> app.run(port=8080)</code></ul><br><br><br>
+            </ul>
+            </p>
+            
+            <h1>How is it structured?</h1>
+            <p>The front-end part of the package was built with Flask, I recommend if you want to put the app in a container to use Guinicorn to ensure security and not directly flask (follow the procedure explained below).</p>
+            <p>
+                Afert run proces if you go on "localhost:****" or "ip_url_server:****" where **** it's the port that we select to hosting you'll seen this page:
+                <br>
+                <img src="tagginggs_frontend_1.jpeg" width="50%">
+                <br><br>
+                By going to the "Load data" page, the data loading form exits. The data that can be entered for tagging can be of two natures: text or images. The images can be loaded by clicking on the "select files" button and selecting the files. As regards the texts, there are two loading possibilities: the first allows you to load the texts divided into different .txt files by clicking on the "select files" button and selecting the files; the second allows you to load texts from a single file divided by a separator which is then inserted in the input text below.
+                <br>
+                For tagging, it is important to define the categories into which you want to divide the data. To do this, enter the category and click on "Insert".
+                <br>
+                Once the form is completed you can click on submit to complete the upload.
+                <br>
+                <img src="tagginggs_frontend_2.jpeg" width="50%">
+                <br><br>
+                Once the upload is complete, by going to the "Analyzes" page, we find all the uploaded analyzes.
+                <br>
+                <img src="tagginggs_frontend_3.jpeg" width="50%">
+                <br><br>
+                For each analysis, information about loading and how many are analyzed is provided. In addition, there are several buttons that perform different functions related to the analysis in question described below:
+                <br>
+                <img src="tagginggs_frontend_4.jpeg" width="50%">
+                <br><br>
+                <ul>
+                    <li><i class="fa fa-ticket fa-fw w3-margin-right"></i>Manage analysis:</li>
+                    <ul>
+                        <li><i class="fa fa-archive fa-fw w3-margin-right"></i>Explore analysis - Analyze the data already tagged.</li>
+                        <li><i class="fa fa-ticket fa-fw w3-margin-right"></i>Start/Continue analysis - Start or continue tagging data.</li>
+                        <li><i class="fa fa-download fa-fw w3-margin-right"></i>Download analysis - Download the analysis with the tagged data</li>
+                        <li><i class="fa fa-trash fa-fw w3-margin-right"></i>Delete analysis - Delete the analysis and all information related to it.</li>
+                    </ul>
+                    <br>
+                    <li><i class="fa fa-code fa-fw w3-margin-right"></i>Machine Learning training model:</li>
+                    <ul>
+                        <li><i class="fa fa-eye-slash fa-fw w3-margin-right"></i>ML Unsupervised Learning - Run an unsupervised model that divides the data into categories (cluster / topic) allowing you to have a kind of natural subdivision.</li>
+                        <li><i class="fa fa-eye fa-fw w3-margin-right"></i>ML Supervised Learning - Once the data or a part of it has been tagged, it allows you to create a supervised classification model to predict categories.</li>
+                    </ul>
+
+                </ul>
+            </p>
+            
+            <br><br>
+            <br><br>
+            <center>
+              <button class="button" onClick="window.open('https://github.com/GiacomoSaccaggi/TaggingGS');">Go to package</button>
+            </center><br><br>
+
+
+
+  </div>
+
+
+   <!-- Footer -->
+    <footer>
+       <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/SaccaggiGiacomo">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/giacomo-saccaggi-782439163/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/GiacomoSaccaggi/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; GiacomoSaccaggi</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
