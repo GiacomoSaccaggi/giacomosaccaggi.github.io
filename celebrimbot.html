@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Celebrimbot — An autonomous AI coding agent embedded directly into your JetBrains IDE.">
+    <meta name="author" content="Giacomo Saccaggi">
+    <title>Celebrimbot — Giacomo Saccaggi</title>
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/413/413772.png" />
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <style>
+        .hero-logo {
+            display: block;
+            margin: 0 auto 30px auto;
+            max-width: 680px;
+            width: 100%;
+        }
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        .feature-block {
+            margin-bottom: 28px;
+        }
+        .feature-block h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .feature-block p {
+            color: #555;
+        }
+        .pipeline-box {
+            background: #f8f8f8;
+            border-left: 4px solid #2c3e50;
+            padding: 18px 24px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.7;
+            border-radius: 3px;
+            overflow-x: auto;
+            white-space: pre;
+        }
+        .table th {
+            background: #2c3e50;
+            color: #fff;
+        }
+        .badge-row {
+            margin: 18px 0 30px 0;
+            text-align: center;
+        }
+        .badge-row img {
+            margin: 4px;
+        }
+        .widget-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            margin: 36px 0;
+        }
+        .cta-github {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 28px;
+            background: #2c3e50;
+            color: #fff !important;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .cta-github:hover { background: #1a252f; }
+        .screenshot {
+            display: block;
+            margin: 30px auto;
+            max-width: 380px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+        }
+        hr.section-hr {
+            border-top: 1px solid #e0e0e0;
+            margin: 40px 0;
+        }
+        .provider-icon { font-size: 18px; margin-right: 6px; }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="all.html">All projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="intro-header" style="background-image: url('sfondo1.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Celebrimbot</h1>
+                        <hr class="small">
+                        <h3>An autonomous AI coding agent embedded directly into your JetBrains IDE.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <!-- Logo -->
+                <img class="hero-logo" src="img/logo_celebrimbot.png" alt="Celebrimbot">
+
+                <!-- Badges -->
+                <div class="badge-row">
+                    <img src="https://github.com/GiacomoSaccaggi/Celebrimbot/workflows/Build/badge.svg" alt="Build">
+                    <a href="https://plugins.jetbrains.com/plugin/32055">
+                        <img src="https://img.shields.io/jetbrains/plugin/v/32055.svg" alt="Version">
+                    </a>
+                    <a href="https://plugins.jetbrains.com/plugin/32055">
+                        <img src="https://img.shields.io/jetbrains/plugin/d/32055.svg" alt="Downloads">
+                    </a>
+                </div>
+
+                <!-- JetBrains Marketplace widgets -->
+                <div class="widget-row">
+                    <div id="jb-card"></div>
+                    <div id="jb-install"></div>
+                </div>
+
+                <div style="text-align:center; margin-bottom: 40px;">
+                    <a class="cta-github" href="https://github.com/GiacomoSaccaggi/Celebrimbot" target="_blank">
+                        <i class="fa fa-github"></i>&nbsp; View on GitHub
+                    </a>
+                </div>
+
+                <hr class="section-hr">
+
+                <!-- What is Celebrimbot -->
+                <h2 class="section-title">What is Celebrimbot?</h2>
+                <p>
+                    Celebrimbot is an IntelliJ Platform plugin that brings a full <strong>multi-agent AI system</strong> into your IDE.
+                    It can read your project files, write and modify code, execute terminal commands, search the web,
+                    inspect git history, and hold natural conversations — all from a single chat panel anchored to your IDE window.
+                </p>
+                <p>
+                    Unlike simple autocomplete tools, Celebrimbot operates as an <strong>agentic loop</strong>: it routes requests
+                    intelligently, executes tasks locally when possible, escalates to cloud planning only when needed,
+                    and retries failures automatically — without ever leaving your editor.
+                </p>
+
+                <!-- Screenshot -->
+                <img class="screenshot" src="img/celebrimbot.png" alt="Celebrimbot chat panel">
+
+                <hr class="section-hr">
+
+                <!-- How it works -->
+                <h2 class="section-title">How It Works</h2>
+                <p>Celebrimbot uses a six-layer architecture — each layer named after a character from Tolkien's legendarium:</p>
+
+                <div class="pipeline-box">User Message
+     |
+     v
++-------------+
+|   Gandalf   |  ← Router: classifies CHAT / EASY_TASK / COMPLEX_TASK
++-------------+
+     |                    |                          |
+   CHAT              EASY_TASK                 COMPLEX_TASK
+     |                    |                          |
+  Galadriel          Aragorn                    Elrond
+  (chat reply)       easy planner               enriches context
+                          |                          |
+               Samwise / Frodo /            Celebrimbor (Cloud)
+               Legolas & Gimli              master planner
+               execute tasks                     |
+                          |              Samwise / Frodo /
+                    Treebeard            Legolas & Gimli
+                    Ent Reviewer         execute tasks
+                    reflection loop           |
+                          |              Treebeard
+                       Bilbo             Ent Reviewer
+                       summary           reflection loop
+                                                  |
+                                               Bilbo
+                                               summary</div>
+
+                <hr class="section-hr">
+
+                <!-- The Fellowship -->
+                <h2 class="section-title">The Fellowship</h2>
+                <table class="table table-bordered table-hover" style="margin-top:16px;">
+                    <thead>
+                        <tr>
+                            <th>Character</th>
+                            <th>Role</th>
+                            <th>Default Provider</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>🧙 <strong>Gandalf</strong></td><td>Router: CHAT / EASY_TASK / COMPLEX_TASK</td><td>Local Qwen</td></tr>
+                        <tr><td>🧝 <strong>Galadriel</strong></td><td>Conversational AI, addresses user as "Mellow"</td><td>Local Qwen</td></tr>
+                        <tr><td>⚔️ <strong>Aragorn</strong></td><td>Easy-task planner</td><td>Local Qwen</td></tr>
+                        <tr><td>📜 <strong>Elrond</strong></td><td>Complex pre-planner, enriches context</td><td>Local Qwen</td></tr>
+                        <tr><td>💎 <strong>Celebrimbor</strong></td><td>Master planner, produces atomic tasks</td><td>Alibaba → Gemini → Local</td></tr>
+                        <tr><td>🌿 <strong>Samwise</strong></td><td>Mechanical worker (delete, terminal, git)</td><td>Local Qwen</td></tr>
+                        <tr><td>🍃 <strong>Frodo</strong></td><td>Code worker (write_code)</td><td>Local Qwen → Alibaba</td></tr>
+                        <tr><td>🏹 <strong>Legolas & Gimli</strong></td><td>Expert worker duo for complex tasks</td><td>Alibaba → Gemini → Local</td></tr>
+                        <tr><td>🌳 <strong>Treebeard</strong></td><td>Ent Reviewer, up to 2 reflection cycles</td><td>Alibaba → Local</td></tr>
+                        <tr><td>📖 <strong>Bilbo</strong></td><td>Session chronicler</td><td>Local Qwen</td></tr>
+                    </tbody>
+                </table>
+
+                <hr class="section-hr">
+
+                <!-- Features -->
+                <h2 class="section-title">Key Features</h2>
+
+                <div class="feature-block">
+                    <h4>🖥️ Offline-first</h4>
+                    <p>Embedded Qwen 2.5 Coder 1.5B runs entirely on your machine via <a href="https://github.com/kherud/java-llama.cpp">java-llama.cpp</a>. No internet required for most operations. The model (~1.2 GB) is downloaded automatically on first use.</p>
+                </div>
+
+                <div class="feature-block">
+                    <h4>☁️ Multi-provider fallback</h4>
+                    <p>Each Fellowship character has its own configurable provider chain: Local Qwen → Alibaba Cloud (Qwen Plus) → Google Gemini → Amazon Q Developer → Kiro (AWS). If one fails, the next kicks in automatically.</p>
+                </div>
+
+                <div class="feature-block">
+                    <h4>🔧 Autonomous code editing</h4>
+                    <p>Reads files, applies changes directly in the editor via PSI/VFS. Creates, edits, and deletes files via natural language. Runs shell commands from within the IDE.</p>
+                </div>
+
+                <div class="feature-block">
+                    <h4>🏛️ Council's Review (Validation Loop)</h4>
+                    <p>After every <code>write_code</code>, the build command runs automatically. Up to 3 self-correction cycles with error feedback before escalating to a stronger model.</p>
+                </div>
+
+                <div class="feature-block">
+                    <h4>🌿 Treebeard (Ent Reviewer)</h4>
+                    <p>A critic agent between Workers and Bilbo. Reviews completed work against the original request and triggers up to 2 re-planning cycles if the result is incomplete. Never hasty, never satisfied with placeholder code.</p>
+                </div>
+
+                <div class="feature-block">
+                    <h4>🔮 Elrond's Palantír (BM25 Index)</h4>
+                    <p>Lightweight local semantic index. COMPLEX_TASK planning retrieves the top-8 relevant files instead of sending the full project skeleton to the planner.</p>
+                </div>
+
+                <div class="feature-block">
+                    <h4>🕯️ MCP Bridge (Beacons of Gondor)</h4>
+                    <p>MCP-compliant JSON-RPC 2.0 server over HTTP (<code>POST /mcp</code>) and Stdio (<code>celebrimbot mcp-stdio</code>) for Claude Desktop and other MCP hosts.</p>
+                </div>
+
+                <div class="feature-block">
+                    <h4>↩️ Shadow Log (Auto-Undo)</h4>
+                    <p>Every file is backed up before being written or deleted. <code>celebrimbot undo</code> restores the last session from <code>.celebrimbot/shadow_log/</code>.</p>
+                </div>
+
+                <hr class="section-hr">
+
+                <!-- Providers -->
+                <h2 class="section-title">AI Providers</h2>
+                <p>All five providers are selectable per-character in Settings → Celebrimbot → Fellowship AI Configuration.</p>
+                <table class="table table-bordered table-hover" style="margin-top:16px;">
+                    <thead>
+                        <tr><th>Provider</th><th>Auth</th><th>Internet</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>🖥️ <strong>Local (embedded Qwen)</strong></td><td>None</td><td>❌ Fully offline</td></tr>
+                        <tr><td>🟠 <strong>Alibaba Qwen Cloud</strong></td><td>API key</td><td>✅</td></tr>
+                        <tr><td>🔵 <strong>Google Gemini</strong></td><td>API key</td><td>✅</td></tr>
+                        <tr><td>🟡 <strong>Amazon Q Developer</strong></td><td>SSO token from <code>~/.aws/sso/cache/</code></td><td>✅</td></tr>
+                        <tr><td>🟢 <strong>Kiro (AWS)</strong></td><td>SSO token from <code>~/.aws/sso/cache/kiro-auth-token.json</code></td><td>✅</td></tr>
+                    </tbody>
+                </table>
+
+                <hr class="section-hr">
+
+                <!-- Benchmark -->
+                <h2 class="section-title">Provider Benchmark</h2>
+                <p>
+                    Evaluated across <strong>12 provider configurations</strong> and <strong>8 test cases</strong> using
+                    Claude Sonnet 4.6 (via Amazon Q Developer) as the judge.
+                </p>
+                <table class="table table-bordered table-hover" style="margin-top:16px;">
+                    <thead>
+                        <tr><th>Rank</th><th>Configuration</th><th>Avg Score</th><th>Pass Rate</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>🥇</td><td>Claude Sonnet 4.6 planners + <strong>Qwen 2.5 Coder 7B</strong> workers</td><td><strong>9.0/10</strong></td><td>100%</td></tr>
+                        <tr><td>🥈</td><td>Claude Sonnet 4.6 planners + <strong>Phi-3.5 Mini</strong> workers</td><td><strong>9.0/10</strong></td><td>100%</td></tr>
+                        <tr><td>🥉</td><td>Claude Sonnet 4.6 planners + <strong>Llama 3.1 8B</strong> workers</td><td>8.9/10</td><td>100%</td></tr>
+                        <tr><td>#4</td><td>All Claude Sonnet 4.6 (baseline)</td><td>8.6/10</td><td>87.5%</td></tr>
+                        <tr><td>#7</td><td>All Local — Qwen 2.5 Coder 7B</td><td>7.8/10</td><td>87.5%</td></tr>
+                        <tr><td>#11</td><td>All Local — Qwen 2.5 Coder 1.5B</td><td>4.9/10</td><td>37.5%</td></tr>
+                    </tbody>
+                </table>
+                <p><strong>Key finding:</strong> Claude Sonnet 4.6 for planners + a 7B+ local model for workers outperforms using Claude for everything (9.0 vs 8.6) while minimising cloud API calls.</p>
+
+                <hr class="section-hr">
+
+                <!-- Installation -->
+                <h2 class="section-title">Installation</h2>
+                <p>
+                    <strong>From JetBrains Marketplace:</strong><br>
+                    <kbd>Settings</kbd> → <kbd>Plugins</kbd> → <kbd>Marketplace</kbd> → search <code>Celebrimbot</code> → <kbd>Install</kbd>
+                </p>
+                <p>
+                    <strong>Requirements:</strong> IntelliJ IDEA 2025.2+ · Java 21+ · ~1.2 GB disk for local model
+                </p>
+
+                <hr class="section-hr">
+
+                <p class="post-meta">Posted by <a href="index.html">Giacomo Saccaggi</a> — July 2025</p>
+                <br><br>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/SaccaggiGiacomo">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/giacomo-saccaggi-782439163/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/GiacomoSaccaggi/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; GiacomoSaccaggi</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+    <!-- JetBrains Marketplace Widgets -->
+    <script src="https://plugins.jetbrains.com/assets/scripts/mp-widget.js"></script>
+    <script>
+        MarketplaceWidget.setupMarketplaceWidget('card',    32055, "#jb-card");
+        MarketplaceWidget.setupMarketplaceWidget('install', 32055, "#jb-install");
+    </script>
+
+</body>
+</html>
