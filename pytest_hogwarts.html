@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Expecto Pytest: Defense Against the Dark Bugs — A complete pytest course, Hogwarts-style.">
+    <meta name="author" content="Giacomo Saccaggi">
+    <title>Expecto Pytest — Giacomo Saccaggi</title>
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/413/413772.png" />
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <style>
+        .hero-img {
+            display: block;
+            margin: 0 auto 30px auto;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 8px;
+        }
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        .episode-list {
+            list-style: none;
+            padding: 0;
+        }
+        .episode-list li {
+            background: #f8f8f8;
+            border-left: 4px solid #7b2d8b;
+            padding: 14px 20px;
+            margin-bottom: 12px;
+            border-radius: 3px;
+            transition: border-color 0.2s;
+        }
+        .episode-list li:hover {
+            border-left-color: #d4a843;
+        }
+        .episode-list li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        .episode-list li a:hover {
+            color: #7b2d8b;
+        }
+        .episode-number {
+            display: inline-block;
+            background: #7b2d8b;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 13px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        .episode-desc {
+            display: block;
+            font-size: 13px;
+            color: #777;
+            margin-top: 4px;
+            margin-left: 38px;
+        }
+        hr.section-hr {
+            border-top: 1px solid #e0e0e0;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://giacomosaccaggi.github.io/deep-dives">All projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="intro-header" style="background-image: url('sfondo1.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Expecto Pytest</h1>
+                        <hr class="small">
+                        <h3>Defense Against the Dark Bugs</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+
+                <h2 class="section-title">🧙‍♂️ A Letter from Hogwarts</h2>
+                <p>
+                    Dear Witch or Wizard Developer,
+                </p>
+                <p>
+                    We are pleased to inform you that you have been accepted at <strong>Hogwarts School of Software Sorcery</strong>,
+                    Department of Defense Against the Dark Bugs. Your wand is your keyboard, your spellbook is <code>pytest</code>,
+                    and your Patronus is a well-tested codebase.
+                </p>
+                <p>
+                    This course takes you from first-year charms (marks &amp; parametrization) through O.W.L.-level magic
+                    (fixtures, mocking, debugging) and all the way to N.E.W.T. mastery (property-based testing, custom plugins).
+                    By the end, you'll be a fully qualified Wandmaker — crafting your own testing instruments from scratch.
+                </p>
+                <p>
+                    <em>"It does not do to dwell on untested code and forget to live."</em> — Albus Dumbledore, probably.
+                </p>
+
+                <hr class="section-hr">
+
+                <h2 class="section-title">📜 Curriculum</h2>
+
+                <ul class="episode-list">
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/pytest_marks.html">
+                            <span class="episode-number">1</span>The Time-Turner: Marks &amp; Parametrization
+                        </a>
+                        <span class="episode-desc">Hermione's Time-Turner lets her attend multiple classes at once. Marks and parametrize let your tests run multiple scenarios in a single function.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/pytest_fixtures.html">
+                            <span class="episode-number">2</span>The Room of Requirement: Fixtures Basics
+                        </a>
+                        <span class="episode-desc">The Room of Requirement provides exactly what you need, when you need it. Fixtures do the same for your tests — setup, data, and teardown on demand.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/pytest_fixtures_advanced.html">
+                            <span class="episode-number">3</span>The Room of Requirement: Advanced Magic
+                        </a>
+                        <span class="episode-desc">Deeper into the Room. Scoped fixtures, parametrized fixtures, fixture factories — the advanced transfiguration of test infrastructure.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/pytest_builtins.html">
+                            <span class="episode-number">4</span>Ministry-Issued Spells: Built-in Fixtures
+                        </a>
+                        <span class="episode-desc">The Ministry of Magic provides standard-issue spells to all Aurors. pytest ships powerful built-in fixtures — tmp_path, monkeypatch, capsys, and more.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/pytest_mocking.html">
+                            <span class="episode-number">5</span>Riddikulus! Defeating the Boggart of Dependencies
+                        </a>
+                        <span class="episode-desc">A Boggart takes the shape of your worst fear — an external API, a database, a filesystem. The Riddikulus charm (mocking) transforms it into something manageable.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/pytest_debugging.html">
+                            <span class="episode-number">6</span>Lumos! Illuminating Failing Tests
+                        </a>
+                        <span class="episode-desc">When darkness falls and tests fail mysteriously, cast Lumos. Debugging techniques that shed light on the darkest corners of your code.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/pytest_plugins.html">
+                            <span class="episode-number">7</span>Weasleys' Wizard Wheezes: The Plugin Ecosystem
+                        </a>
+                        <span class="episode-desc">Fred and George's joke shop is packed with ingenious inventions. The pytest plugin ecosystem is just as wild — coverage, xdist, BDD, and hundreds more.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/pytest_hypothesis.html">
+                            <span class="episode-number">8</span>The Imperius Curse: Property-Based Testing with Hypothesis
+                        </a>
+                        <span class="episode-desc">The Imperius Curse forces its target to do whatever you command. Hypothesis forces your code to handle whatever input the universe throws at it.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/pytest_writing_plugins.html">
+                            <span class="episode-number">9</span>Becoming a Wandmaker: Writing Custom Plugins
+                        </a>
+                        <span class="episode-desc">Ollivander crafts wands tailored to each wizard. In this final lesson, you learn to craft your own pytest plugins — bespoke tools for your unique testing needs.</span>
+                    </li>
+                </ul>
+
+                <hr class="section-hr">
+
+                <p style="text-align: center; color: #999; font-style: italic;">
+                    "Mischief Managed." 🗺️
+                </p>
+                <p class="post-meta" style="text-align: center;">Posted by <a href="#">Giacomo Saccaggi</a> in December, 2023</p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/SaccaggiGiacomo">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/giacomo-saccaggi-782439163/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/GiacomoSaccaggi/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; GiacomoSaccaggi</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

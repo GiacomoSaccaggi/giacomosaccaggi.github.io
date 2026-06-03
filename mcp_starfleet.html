@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Starfleet Engineering: Building an MCP Server from Scratch — A complete guide to the Model Context Protocol, Star Trek style.">
+    <meta name="author" content="Giacomo Saccaggi">
+    <title>Starfleet Engineering: MCP Server — Giacomo Saccaggi</title>
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/413/413772.png" />
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <style>
+        .hero-img {
+            display: block;
+            margin: 0 auto 30px auto;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 8px;
+        }
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        .episode-list {
+            list-style: none;
+            padding: 0;
+        }
+        .episode-list li {
+            background: #f8f8f8;
+            border-left: 4px solid #0074d9;
+            padding: 14px 20px;
+            margin-bottom: 12px;
+            border-radius: 3px;
+            transition: border-color 0.2s;
+        }
+        .episode-list li:hover {
+            border-left-color: #ff851b;
+        }
+        .episode-list li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        .episode-list li a:hover {
+            color: #0074d9;
+        }
+        .episode-number {
+            display: inline-block;
+            background: #0074d9;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 13px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        .episode-desc {
+            display: block;
+            font-size: 13px;
+            color: #777;
+            margin-top: 4px;
+            margin-left: 38px;
+        }
+        .stardate {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: #999;
+            margin-top: 6px;
+            margin-left: 38px;
+        }
+        hr.section-hr {
+            border-top: 1px solid #e0e0e0;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://giacomosaccaggi.github.io/deep-dives">All projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="intro-header" style="background-image: url('sfondo1.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Starfleet Engineering</h1>
+                        <hr class="small">
+                        <h3>Building an MCP Server from Scratch</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <h2 class="section-title">🖖 Captain's Log</h2>
+                <p>
+                    The <strong>Model Context Protocol</strong> is the Universal Translator for AI systems — a standardized way
+                    for language models to communicate with external tools, data sources, and services. In this series, we report
+                    for duty at Starfleet Academy and build a fully operational MCP Server from the ground up.
+                </p>
+                <p>
+                    Each chapter is a mission briefing. From First Contact with the protocol, to activating the Ship Computer,
+                    initializing the Warp Core, calibrating the Sensor Array, arming the Replicators, establishing Subspace Communications,
+                    and finally facing the Kobayashi Maru — the ultimate test of deployment readiness.
+                </p>
+                <p>
+                    <em>"The needs of the many outweigh the needs of the few."</em> — And so we share these Engineering logs
+                    with all cadets brave enough to build their own starship.
+                </p>
+
+                <hr class="section-hr">
+
+                <h2 class="section-title">📡 Mission Briefings</h2>
+
+                <ul class="episode-list">
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/mcp_first_contact.html">
+                            <span class="episode-number">1</span>First Contact: What is the Model Context Protocol
+                        </a>
+                        <span class="episode-desc">The Federation encounters a new species of protocol. Initial scans reveal a standardized communication layer between AI and external systems.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/mcp_ollama.html">
+                            <span class="episode-number">2</span>Activating the Ship Computer with Ollama
+                        </a>
+                        <span class="episode-desc">Before we can build the ship, we need a brain. We bring the Ship Computer online using Ollama as our local LLM core.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/mcp_warp_core.html">
+                            <span class="episode-number">3</span>Initializing the Warp Core: Server Setup
+                        </a>
+                        <span class="episode-desc">The Warp Core powers everything. We scaffold our MCP Server, configure the reactor, and achieve first light.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/mcp_resources.html">
+                            <span class="episode-number">4</span>Sensor Array Active: Exposing Resources
+                        </a>
+                        <span class="episode-desc">Long-range sensors come online. We expose data resources to the AI so it can perceive the universe around it.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/mcp_tools.html">
+                            <span class="episode-number">5</span>Armory and Replicators: Creating Tools
+                        </a>
+                        <span class="episode-desc">Phasers, tricorders, and replicators — we arm our Server with callable tools that let the AI act on the world.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/mcp_prompts.html">
+                            <span class="episode-number">6</span>Subspace Communications: Managing Prompts
+                        </a>
+                        <span class="episode-desc">We open hailing frequencies and define prompt templates — the subspace channels through which the crew communicates with the Computer.</span>
+                    </li>
+                    <li>
+                        <a href="https://giacomosaccaggi.github.io/deep-dives/mcp_kobayashi_maru.html">
+                            <span class="episode-number">7</span>The Kobayashi Maru: Testing and Deployment
+                        </a>
+                        <span class="episode-desc">The unwinnable scenario. We test our Server under pressure, handle edge cases, and deploy to production. There is no such thing as a no-win scenario.</span>
+                    </li>
+                </ul>
+
+                <hr class="section-hr">
+
+                <p style="text-align: center; color: #999; font-style: italic;">
+                    "Make it so." — Captain Jean-Luc Picard
+                </p>
+                <p class="post-meta" style="text-align: center;">Posted by <a href="#">Giacomo Saccaggi</a> in January, 2026</p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/SaccaggiGiacomo">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/giacomo-saccaggi-782439163/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/GiacomoSaccaggi/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; GiacomoSaccaggi</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
