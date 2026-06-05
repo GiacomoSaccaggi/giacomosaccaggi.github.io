@@ -143,7 +143,7 @@
                 <img class="hero-logo" src="img/logo_celebrimbot.png" alt="Celebrimbot">
 
                 <!-- Badges -->
-                <div class="badge-row">
+                <div class="badge-row" style="display: none;">
                     <img src="https://github.com/GiacomoSaccaggi/Celebrimbot/workflows/Build/badge.svg" alt="Build">
                     <a href="https://plugins.jetbrains.com/plugin/32055">
                         <img src="https://img.shields.io/jetbrains/plugin/v/32055.svg" alt="Version">
@@ -253,7 +253,17 @@
 
                 <div class="feature-block">
                     <h4>☁️ Multi-provider fallback</h4>
-                    <p>Each Fellowship character has its own configurable provider chain: Local Qwen → Alibaba Cloud (Qwen Plus) → Google Gemini → Amazon Q Developer → Kiro (AWS). If one fails, the next kicks in automatically.</p>
+                    <p>Each Fellowship character has its own configurable provider chain: Local Qwen → Alibaba Cloud (Qwen Plus) → Google Gemini → Amazon Q Developer → Kiro (AWS) → External CLI. If one fails, the next kicks in automatically.</p>
+                </div>
+
+                <div class="feature-block">
+                    <h4>🔌 External CLI Delegation</h4>
+                    <p>Any Fellowship character can delegate its work to an external AI agent CLI (Kiro, Junie, Aider, etc.). Output is streamed back into the chat panel in real-time. Configure via Settings with <code>{{MESSAGE}}</code> placeholder support.</p>
+                </div>
+
+                <div class="feature-block">
+                    <h4>⚙️ Task Mode Toggles & Custom Prompts</h4>
+                    <p>Enable/disable EASY_TASK and COMPLEX_TASK independently. When both are off, Gandalf is bypassed and all messages go directly to Galadriel (chat-only mode). Every character's system prompt is editable in Settings.</p>
                 </div>
 
                 <div class="feature-block">
@@ -290,7 +300,7 @@
 
                 <!-- Providers -->
                 <h2 class="section-title">AI Providers</h2>
-                <p>All five providers are selectable per-character in Settings → Celebrimbot → Fellowship AI Configuration.</p>
+                <p>All six providers are selectable per-character in Settings → Celebrimbot → Fellowship AI Configuration.</p>
                 <table class="table table-bordered table-hover" style="margin-top:16px;">
                     <thead>
                         <tr><th>Provider</th><th>Auth</th><th>Internet</th></tr>
@@ -301,6 +311,7 @@
                         <tr><td>🔵 <strong>Google Gemini</strong></td><td>API key</td><td>✅</td></tr>
                         <tr><td>🟡 <strong>Amazon Q Developer</strong></td><td>SSO token from <code>~/.aws/sso/cache/</code></td><td>✅</td></tr>
                         <tr><td>🟢 <strong>Kiro (AWS)</strong></td><td>SSO token from <code>~/.aws/sso/cache/kiro-auth-token.json</code></td><td>✅</td></tr>
+                        <tr><td>🔧 <strong>External CLI</strong></td><td>CLI-dependent</td><td>CLI-dependent</td></tr>
                     </tbody>
                 </table>
 
@@ -341,7 +352,7 @@
 
                 <hr class="section-hr">
 
-                <p class="post-meta">Posted by <a href="index.html">Giacomo Saccaggi</a> — July 2025</p>
+                <p class="post-meta">Posted by <a href="index.html">Giacomo Saccaggi</a> — June 2025 · v0.1.0</p>
                 <br><br>
 
             </div>
